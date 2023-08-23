@@ -1,0 +1,28 @@
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 0.5fr;
+    gap: 90px;
+    margin-top: 170px;
+    align-items: center;
+}
+
+.footer__text {
+    font-family: 'Raleway';
+    font-size: 24px;
+    text-align: start;
+}
+
+.footer__contacts {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__contacts_text {
+    font-family: 'Radio Canada';
+    font-size: 28px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+}
