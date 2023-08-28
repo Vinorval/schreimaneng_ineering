@@ -1,0 +1,26 @@
+.promo {
+    margin-top: 100px;
+    display: grid;
+    gap: 30px;
+}
+
+.promo__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 113px;
+    text-align: start;
+    color: #565656;
+    margin: 0;
+}
+
+.promo__subtitle {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: start;
+    color: #565656;
+}
