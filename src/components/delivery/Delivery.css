@@ -1,0 +1,23 @@
+.delivery {
+    margin-top: 150px;
+}
+
+.delivery__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 59px;
+    text-align: start;
+    color: #565656;
+}
+
+.delivery__text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #565656;
+    text-align: start;
+}
