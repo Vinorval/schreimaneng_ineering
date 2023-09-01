@@ -13,6 +13,7 @@ import Catalog from '../../pages/catalog';
 import Product from '../../pages/product';
 
 import Item from '../../pages/item';
+import NotFound from '../../pages/notFound';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/catalog/:product" element={ <Product /> } />
 
         <Route path="/catalog/:product/:itemId" element={ <Item /> } />
+        <Route path="*" element={ <NotFound /> } />
       </Routes>
       <Footer></Footer>
     </div>
