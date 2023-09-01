@@ -1,5 +1,5 @@
 
-import './App.css';
+import Styles from './App.module.css';
 import { Routes, Route } from 'react-router-dom';
 import AppHeader from '../appHeader/AppHeader';
 import Footer from '../footer/Footer';
@@ -17,7 +17,7 @@ import NotFound from '../../pages/notFound';
 
 function App() {
   return (
-    <div className="App">
+    <div className={Styles.app}>
       <AppHeader></AppHeader>
       <Routes>
         <Route path="/" element={ <HomePage /> }/>

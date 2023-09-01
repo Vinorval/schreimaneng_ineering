@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import './fonts/Arvo/ArvoRegular/ArvoRegular.woff';
+import './fonts/Raleway/RalewayRegular/RalewayRegular.woff';
 import './index.css';
+
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
