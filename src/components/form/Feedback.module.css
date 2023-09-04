@@ -5,15 +5,15 @@
 }
 
 .feedback__textBlock {
-    max-width: 900px;
+    width: 50%;
 }
 
 .feedback__title {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 75px;
+    font-size: 56px;
+    line-height: 58px;
     color: #565656;
     text-align: start;
 }
@@ -22,16 +22,17 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 28px;
+    line-height: 30px;
     display: flex;
     align-items: center;
     color: #565656;
     text-align: start;
+    width: 80%;
 }
 
 .form {
-    width: 564px;
+    width: 569px;
     height: 885px;
     border: 1px solid;
 }
@@ -50,6 +51,8 @@
     margin-top: 80px;
     display: grid;
     gap: 30px;
+    padding: 0;
+    justify-items: center;
 }
 
 .form__input {

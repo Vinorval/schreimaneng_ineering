@@ -1,12 +1,12 @@
-import "./Delivery.css";
+import Styles from './Delivery.module.css';
 import Map from '../../images/map.svg';
 
 function Delivery() {
     return (
-        <section className="delivery">
-            <h2 className="delivery__title">Работаем по всей России</h2>
-            <p className="delivery__text">Беремся за проекты от Калининграда до Камчатки </p>
-            <img src={Map} className="delivery__image" />
+        <section className={Styles.delivery}>
+            <h2 className={Styles.delivery__title}>Работаем по всей России</h2>
+            <p className={Styles.delivery__text}>Беремся за проекты от Калининграда до Камчатки </p>
+            <img src={Map} className={Styles.delivery__image} />
         </section>
     )
 }

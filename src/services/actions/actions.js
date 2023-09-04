@@ -5,7 +5,7 @@ export const GET_ORDER_SUCCESS = 'GET_ORDER_SUCCESS';
 export const GET_ORDER_FAILED = 'GET_ORDER_FAILED';
 export const CLOSE_POPUP = 'CLOSE_POPUP';
 
-const getIngredientsSuccess = (items) => {
+export const getProductSuccess = (items) => {
     return {
       type: GET_PRODUCTS_SUCCESS,
       items: items

@@ -1,9 +1,47 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
+import { productsObj } from "../../utils/products";
+import { getProductSuccess } from "../../services/actions/actions";
 
 import Styles from './productsList.module.css';
 import Item from '../../images/товар.jpg';
 
 const ProductsList = () => {
+    const location = useLocation();
+    const dispatch = useDispatch();
+
+    const getProductsArr = () => {
+        switch (location.pathname) {
+            case '/catalog/controlPanel': {
+                dispatch(getProductSuccess(productsObj.controlPanel));
+                return productsObj.controlPanel
+            }
+            default: {
+                return [];
+            }
+        }
+    };
+
+    const returnProduct = () => {
+        return getProductsArr().map((item) => {
+                return (
+                    <NavLink key={item._id} to={`/catalog/controlPanel/${item._id}`} className={Styles.item}>
+                        <img className={Styles.item__image} src={Item} />
+                        <div className={Styles.item__description} >
+                            <h3 className={Styles.item__name} >Щит управления {item.name}</h3>
+                            <p className={Styles.item__text} >{item.description}</p>
+                            <p className={[Styles.item__text, Styles.item__text_type_last]} >{item._id}</p>
+                        </div>
+                        <div className={Styles.item__oder} >
+                            <p className={Styles.item__price} >₽ 56 260</p>
+                            <p className={Styles.item__text} >на заказ</p>
+                            <button type='button' className={Styles.item__button} >Добавить</button>
+                        </div>
+                    </NavLink>
+                )
+            })
+    }
+
     return (
         <section className={Styles.catalog}>
             <h2 className={Styles.catalog__title}>ЩИТЫ УПРАВЛЕНИЯ</h2>
@@ -15,32 +53,7 @@ const ProductsList = () => {
                 </ul>
             </div>
             <ul className={Styles.list}>
-                <NavLink to="/catalog/controlPanel/ABU-PVZ-E-1-Z-1,7-15" className={Styles.item}>
-                    <img className={Styles.item__image} src={Item} />
-                    <div className={Styles.item__description} >
-                        <h3 className={Styles.item__name} >Щит управления ABU-PVZ-E-1-Z-1,7-15</h3>
-                        <p className={Styles.item__text} >Серия: Щиты для воздушных завес, PVZ; Назначение: управление тепловой завесой электрическим калорифером; Материал корпуса: пластик; Перечень КИПиА: контроллер; Тип контроллера / терморегулятора: Zentec M100; Предельная номинальная мощность электродвигателя: 1.7 кВт.</p>
-                        <p className={[Styles.item__text, Styles.item__text_type_last]} >Арт. 00-00057143</p>
-                    </div>
-                    <div className={Styles.item__oder} >
-                        <p className={Styles.item__price} >₽ 56 260</p>
-                        <p className={Styles.item__text} >на заказ</p>
-                        <button type='button' className={Styles.item__button} ></button>
-                    </div>
-                </NavLink>
-                <NavLink to="/catalog/controlPanel/ABU-PVZ-E-1-Z-1,7-16" className={Styles.item}>
-                    <img className={Styles.item__image} src={Item} />
-                    <div className={Styles.item__description} >
-                        <h3 className={Styles.item__name} >Щит управления ABU-PVZ-E-1-Z-1,7-16</h3>
-                        <p className={Styles.item__text} >Серия: Щиты для воздушных завес, PVZ; Назначение: управление тепловой завесой электрическим калорифером; Материал корпуса: пластик; Перечень КИПиА: контроллер; Тип контроллера / терморегулятора: Zentec M100; Предельная номинальная мощность электродвигателя: 1.7 кВт.</p>
-                        <p className={[Styles.item__text, Styles.item__text_type_last]} >Арт. 00-00057143</p>
-                    </div>
-                    <div className={Styles.item__oder} >
-                        <p className={Styles.item__price} >₽ 56 260</p>
-                        <p className={Styles.item__text} >на заказ</p>
-                        <button type='button' className={Styles.item__button} ></button>
-                    </div>
-                </NavLink>
+                {returnProduct()}
             </ul>
         </section>
     )

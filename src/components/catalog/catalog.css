@@ -6,8 +6,8 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 75px;
+    font-size: 40px;
+    line-height: 42px;
     color: #565656;
     text-align: start;
 }
@@ -33,7 +33,11 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 28px;
+    line-height: 30px;
     color: #565656;
+}
+
+.itemPr__image {
+    height: 80%;
 }

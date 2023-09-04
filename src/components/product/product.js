@@ -1,7 +1,18 @@
 import Styles from './product.module.css';
 import Item from '../../images/товар.jpg';
+import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
+import { NavLink, useLocation } from "react-router-dom";
 
 const Product = () => {
+    const { products } = useSelector( store => ({ products: store.products }) );
+    const location = useLocation();
+    console.log(products)
+    console.log(location.pathname)
+
+    //const product = products = [] ? products.find(item => `/catalog/controlPanel/${item._id}` == location.pathname) : '';
+
+    //console.log(product);
+
     return (
         <section className={Styles.product} >
             <h2 className={Styles.product__title}>Щит управления ABU-PVZ-E-1-Z-1,7-15</h2>
