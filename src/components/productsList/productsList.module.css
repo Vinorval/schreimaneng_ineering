@@ -39,6 +39,9 @@
 
 .item {
     display: flex;
+    color: black;
+    text-decoration: none;
+    text-align: start;
 }
 
 .item__image {
