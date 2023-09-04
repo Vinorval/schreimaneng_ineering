@@ -1,0 +1,55 @@
+.catalog {
+    display: grid;
+    grid-template-columns: 20% 75%;
+    gap: 5%;
+}
+
+.catalog__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 75px;
+    color: #565656;
+    text-align: start;
+    grid-column: 1/4;
+}
+
+.version {
+    border: 1px solid #565656;
+}
+
+.version__title {
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: start;
+}
+
+.version__list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+}
+
+.list {
+    padding: 0;
+}
+
+.item {
+    display: flex;
+}
+
+.item__image {
+    width: 300px;
+    height: 200px;
+}
+
+.item__description {
+    width: 50%;
+}
+
+.oreder {
+    width: 10%;
+}

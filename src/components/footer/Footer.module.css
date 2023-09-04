@@ -1,14 +1,14 @@
 .footer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 0.5fr;
-    gap: 90px;
+    gap: 60px;
     margin-top: 170px;
     align-items: center;
 }
 
 .footer__text {
     font-family: 'Raleway';
-    font-size: 24px;
+    font-size: 18px;
     text-align: start;
 }
 
@@ -19,10 +19,32 @@
 
 .footer__contacts_text {
     font-family: 'Radio Canada';
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .social {
     display: flex;
     justify-content: space-evenly;
+}
+
+.social__link {
+    width: 39px;
+}
+
+@media screen and (max-width: 1440px) {
+    .footer {
+        gap: 30px;
+    }
+
+    .footer__text{
+        font-size: 14px;
+    }
+
+    .footer__contacts_text {
+        font-size: 18px;
+    }
+
+    .social__link {
+        width: 29px;
+    }
 }
