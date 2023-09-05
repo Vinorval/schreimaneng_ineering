@@ -29,7 +29,6 @@ function App() {
         <Route path="/catalog/:product" element={ <Product /> } />
 
         <Route path="/catalog/:product/:itemId" element={ <Item /> } />
-        <Route path="*" element={ <NotFound /> } />
       </Routes>
       <Footer></Footer>
     </div>
