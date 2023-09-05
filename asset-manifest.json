@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.3fccbd3a.css",
-    "main.js": "./static/js/main.63aa4ca9.js",
-    "static/js/787.f60c5ca6.chunk.js": "./static/js/787.f60c5ca6.chunk.js",
-    "static/media/certificate_1.png": "./static/media/certificate_1.f211e55fda45f1d265b3.png",
-    "static/media/place.jpg": "./static/media/place.a7c3f80e029d4b9339bf.jpg",
-    "static/media/certificate_2.png": "./static/media/certificate_2.194a606c31ff3cacb0e3.png",
-    "static/media/RalewayRegular.woff": "./static/media/RalewayRegular.ce5cc627b66a4c01b215.woff",
-    "static/media/regulator.jpg": "./static/media/regulator.3daa7b7dc5e84fed4f37.jpg",
-    "static/media/autoDevice.jpg": "./static/media/autoDevice.a562d22bc17d4125e220.jpg",
-    "static/media/contrlPanel.jpg": "./static/media/contrlPanel.925c94bddf231543bddd.jpg",
-    "static/media/товар.jpg": "./static/media/товар.f740f0761804f91484e9.jpg",
-    "static/media/ArvoRegular.woff": "./static/media/ArvoRegular.4f159b42a749f10ddaff.woff",
-    "static/media/icon-whatsapp.svg": "./static/media/icon-whatsapp.414fd02a88a065e9b52f11f2c86ee955.svg",
-    "static/media/icon-telegram.svg": "./static/media/icon-telegram.3ae54a51076ce9681e7665b6ebc8d780.svg",
-    "static/media/Logo.svg": "./static/media/Logo.2b4764a81d5f6be0da3831efa3d91640.svg",
-    "index.html": "./index.html",
-    "main.3fccbd3a.css.map": "./static/css/main.3fccbd3a.css.map",
-    "main.63aa4ca9.js.map": "./static/js/main.63aa4ca9.js.map",
-    "787.f60c5ca6.chunk.js.map": "./static/js/787.f60c5ca6.chunk.js.map"
+    "main.css": "/schreimaneng_ineering/static/css/main.f7af6f3d.css",
+    "main.js": "/schreimaneng_ineering/static/js/main.7eed2f20.js",
+    "static/js/787.f60c5ca6.chunk.js": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js",
+    "static/media/certificate_1.png": "/schreimaneng_ineering/static/media/certificate_1.f211e55fda45f1d265b3.png",
+    "static/media/place.jpg": "/schreimaneng_ineering/static/media/place.a7c3f80e029d4b9339bf.jpg",
+    "static/media/certificate_2.png": "/schreimaneng_ineering/static/media/certificate_2.194a606c31ff3cacb0e3.png",
+    "static/media/RalewayRegular.woff": "/schreimaneng_ineering/static/media/RalewayRegular.ce5cc627b66a4c01b215.woff",
+    "static/media/regulator.jpg": "/schreimaneng_ineering/static/media/regulator.3daa7b7dc5e84fed4f37.jpg",
+    "static/media/autoDevice.jpg": "/schreimaneng_ineering/static/media/autoDevice.a562d22bc17d4125e220.jpg",
+    "static/media/contrlPanel.jpg": "/schreimaneng_ineering/static/media/contrlPanel.925c94bddf231543bddd.jpg",
+    "static/media/товар.jpg": "/schreimaneng_ineering/static/media/товар.f740f0761804f91484e9.jpg",
+    "static/media/ArvoRegular.woff": "/schreimaneng_ineering/static/media/ArvoRegular.4f159b42a749f10ddaff.woff",
+    "static/media/icon-whatsapp.svg": "/schreimaneng_ineering/static/media/icon-whatsapp.414fd02a88a065e9b52f11f2c86ee955.svg",
+    "static/media/icon-telegram.svg": "/schreimaneng_ineering/static/media/icon-telegram.3ae54a51076ce9681e7665b6ebc8d780.svg",
+    "static/media/Logo.svg": "/schreimaneng_ineering/static/media/Logo.2b4764a81d5f6be0da3831efa3d91640.svg",
+    "index.html": "/schreimaneng_ineering/index.html",
+    "main.f7af6f3d.css.map": "/schreimaneng_ineering/static/css/main.f7af6f3d.css.map",
+    "main.7eed2f20.js.map": "/schreimaneng_ineering/static/js/main.7eed2f20.js.map",
+    "787.f60c5ca6.chunk.js.map": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fccbd3a.css",
-    "static/js/main.63aa4ca9.js"
+    "static/css/main.f7af6f3d.css",
+    "static/js/main.7eed2f20.js"
   ]
 }
