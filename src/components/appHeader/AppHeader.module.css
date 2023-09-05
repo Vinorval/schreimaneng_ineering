@@ -26,6 +26,7 @@
 
 .navigate {
     width: 40%;
+    min-width: 625px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +43,7 @@
     justify-content: space-between;
     align-items: center;
     width: 22%;
+    max-width: 320px;
 }
 
 .contacts__social {
@@ -59,6 +61,60 @@
     font-size: 18px;
 }
 
+.burgerMenu {
+    display: none;
+}
+
+.burgerMenu__navigation {
+    display: grid;
+    gap: 16px;
+    text-align: start;
+    width: 160px;
+}
+
+.burgerMenu_visible {
+    display: flex;
+    border: 1px solid;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 0 70px 20px;
+    align-items: flex-start;
+}
+
+.burgerMenu__buttonClose {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+    padding-right: 20px;
+}
+
+.burgerMenu__ikonClose {
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.burgerMenu_invisible {
+    display: none;
+}
+
+.burgerMenu__link {
+    text-decoration: none;
+    color: white;
+}
+
+.burgerMenu__button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: white;
+}
+
+.burgerMenu__ikon {
+    width: 30px;
+}
+
 @media screen and (max-width: 1440px) {
     .logo__image {
         width: 70px;
@@ -71,6 +127,7 @@
 
     .navigate {
         width: 40%;
+        min-width: 450px;
     }
 
     .navigate__link {
@@ -79,6 +136,12 @@
 
     .contacts {
         width: 22%;
+        max-width: 230px;
+    }
+
+    .contacts__social {
+        width: 29px;
+        height: 29px;
     }
 
     .contacts__phone_number {
@@ -90,9 +153,66 @@
     }
 }
 
-@media screen and (max-width: 1180px) { 
+@media screen and (max-width: 1024px) { 
+    .header {
+        margin-top: 20px;
+    }
+
+    .logo__image {
+        width: 55px;
+        height: 85px;
+    }
+
+    .logo__text {
+        font-size: 20px;
+        padding-left: 6px;
+    }
+
+    .navigate {
+        min-width: 350px;
+    }
+    
+    .navigate__link {
+        font-size: 12px;
+    }
+
+    .contacts {
+        max-width: 160px;
+        min-width: 155px;
+    }
+
     .contacts__social {
-        width: 29px;
-        height: 29px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .contacts__phone_number {
+        font-size: 12px;
+    }
+
+    .contacts__phone_text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .burgerMenu {
+        display: flex;
+    }
+
+    .navigate {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+    }
+
+    .contacts {
+        display: none;
     }
 }
