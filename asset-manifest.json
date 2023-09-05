@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/schreimaneng_ineering/static/css/main.f7af6f3d.css",
-    "main.js": "/schreimaneng_ineering/static/js/main.f395e35a.js",
+    "main.js": "/schreimaneng_ineering/static/js/main.7eed2f20.js",
     "static/js/787.f60c5ca6.chunk.js": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js",
     "static/media/certificate_1.png": "/schreimaneng_ineering/static/media/certificate_1.f211e55fda45f1d265b3.png",
     "static/media/place.jpg": "/schreimaneng_ineering/static/media/place.a7c3f80e029d4b9339bf.jpg",
@@ -17,11 +17,11 @@
     "static/media/Logo.svg": "/schreimaneng_ineering/static/media/Logo.2b4764a81d5f6be0da3831efa3d91640.svg",
     "index.html": "/schreimaneng_ineering/index.html",
     "main.f7af6f3d.css.map": "/schreimaneng_ineering/static/css/main.f7af6f3d.css.map",
-    "main.f395e35a.js.map": "/schreimaneng_ineering/static/js/main.f395e35a.js.map",
+    "main.7eed2f20.js.map": "/schreimaneng_ineering/static/js/main.7eed2f20.js.map",
     "787.f60c5ca6.chunk.js.map": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7af6f3d.css",
-    "static/js/main.f395e35a.js"
+    "static/js/main.7eed2f20.js"
   ]
 }
