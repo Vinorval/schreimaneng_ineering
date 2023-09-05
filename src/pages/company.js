@@ -1,12 +1,22 @@
+import Styles from './company.module.css';
 import Promotion from "../components/promotion/Promotion";
-import InfoCompany from "../components/infoCompany/infoCompany";
+import InfoItem from '../components/infoItem/infoItem';
+import { companyInfo } from '../utils/utils';
 
 function Company () {
+
+    const returnInfo = () => {
+        return companyInfo.map( (item) => {
+            return (
+                <InfoItem key={item.id} title={item.title} imgArr={item.images} text={item.text}/>
+            )
+        })
+    }
     return (
-        <>
+        <section className={Styles.company}>
             <Promotion title="КОМПАНИЯ" text="Объединяем опыт и творчество для создания уникальных решений" />
-            <InfoCompany />
-        </>
+            {returnInfo()}
+        </section>
     )
 }
 

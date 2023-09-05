@@ -1,10 +1,8 @@
-import NotFoundItem from "../components/notFound/notFound";
-
 function NotFound() {
     return (
-        <>
-            <NotFound />
-        </>
+        <div>
+            <p className='nothing'>По вашему запросу ничего не найдено</p>
+        </div>
     )
 }
 
