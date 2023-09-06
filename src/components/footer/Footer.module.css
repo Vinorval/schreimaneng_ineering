@@ -48,3 +48,52 @@
         width: 29px;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        gap: 15px;
+    }
+
+    .footer__contacts_text {
+        font-size: 14px;
+    }
+
+    .footer__text {
+        font-size: 12px;
+    }
+
+    .social__link {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .footer__contacts {
+        display: block;
+    }
+
+    .footer__text {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .footer__contacts {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .social {
+        grid-row: 1/2;
+        width: 100px;
+        margin: auto;
+    }
+
+    .social__link {
+        width: 29px;
+    }
+}
