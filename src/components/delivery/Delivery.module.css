@@ -1,27 +1,49 @@
 .delivery {
-    margin-top: 150px;
+    margin-top: 100px;
+    font-family: 'RalewayRegular';
+    font-style: normal;
+    color: #565656;
 }
 
 .delivery__title {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 700;
     font-size: 44px;
     line-height: 46px;
     text-align: start;
-    color: #565656;
 }
 
 .delivery__text {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 26px;
-    color: #565656;
     text-align: start;
+    margin: 0;
 }
 
 .delivery__image {
     width: 100%;
+}
+
+@media screen and (max-width: 840px) {
+    .delivery__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .delivery__text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .delivery__title {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .delivery__text {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }

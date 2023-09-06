@@ -1,5 +1,23 @@
+.home {
+    max-width: 1440px;
+    margin: auto;
+}
+
 .home__company {
     margin-top: 200px;
     display: grid;
     gap: 150px;
+    padding: 0;
+}
+
+@media screen and (max-width: 1440px) {
+    .home__company {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .home__company {
+        gap: 40px;
+    }
 }

@@ -2,25 +2,74 @@
     margin-top: 100px;
     display: grid;
     gap: 30px;
-    width: 80%;
+    width: 65%;
+    font-family: 'RalewayRegular';
+    font-style: normal;
+    color: #565656;
 }
 
 .promo__title {
-    font-family: 'Raleway';
-    font-style: normal;
     font-size: 72px;
     line-height: 74px;
     text-align: start;
-    color: #565656;
     margin: 0;
 }
 
 .promo__subtitle {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 35px;
     text-align: start;
-    color: #565656;
+}
+
+@media screen and (max-width: 1440px) {
+    .promo__title {
+        font-size: 50px;
+        line-height: 52px;
+    }
+
+    .promo__subtitle {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .promo__title {
+        font-size: 35px;
+        line-height: 37px;
+    }
+
+    .promo__subtitle {
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .promo {
+        gap: 15px;
+    }
+
+    .promo__title {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .promo__subtitle {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .promo__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .promo__subtitle {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }

@@ -8,7 +8,7 @@ import { advantagesList } from "../utils/utils";
 
 function HomePage() {
     return (
-        <div>
+        <div className={Styles.home}>
             <Promo />
             <ul className={Styles.home__company}>
                 <InfoItem 
