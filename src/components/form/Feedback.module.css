@@ -2,6 +2,9 @@
     margin-top: 150px;
     display: flex;
     justify-content: space-between;
+    font-family: 'RalewayRegular';
+    font-style: normal;
+    color: #565656;
 }
 
 .feedback__textBlock {
@@ -9,46 +12,37 @@
 }
 
 .feedback__title {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 700;
-    font-size: 56px;
-    line-height: 58px;
-    color: #565656;
+    font-size: 44px;
+    line-height: 46px;
     text-align: start;
 }
 
 .feedback__text {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 500;
-    font-size: 28px;
-    line-height: 30px;
+    font-size: 24px;
+    line-height: 26px;
     display: flex;
     align-items: center;
-    color: #565656;
     text-align: start;
     width: 80%;
 }
 
 .form {
-    width: 569px;
-    height: 885px;
+    width: 500px;
+    height: 700px;
     border: 1px solid;
 }
 
 .form__title {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 500;
-    font-size: 32px;
-    line-height: 38px;
-    color: #565656;
+    font-size: 24px;
+    line-height: 26px;
     margin-top: 60px;
 }
 
 .form__inputList {
-    margin-top: 80px;
+    margin-top: 60px;
     display: grid;
     gap: 30px;
     padding: 0;
@@ -56,37 +50,135 @@
 }
 
 .form__input {
-    width: 466px;
-    height: 110px;
+    width: 450px;
+    height: 60px;
     border: 1px solid;
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 20px;
     text-align: center;
-    color: #565656;
 }
 
 .form__button {
     background-color: #EBBA8C;
     border: 1px solid;
-    width: 466px;
-    height: 110px;
-    font-family: 'Raleway';
-    font-style: normal;
+    width: 450px;
+    height: 80px;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    color: #565656;
+    font-size: 20px;
+    line-height: 22px;
 }
 
 .form__subtext {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    color: #565656;
+    font-size: 18px;
+    line-height: 20px;
     margin-top: 60px;
+}
+
+@media screen and (max-width: 1440px) {
+    .feedback__title {
+        font-size: 32px;
+        line-height: 34px;
+    }
+
+    .feedback__text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .form {
+        width: 400px;
+        height: 480px;
+    }
+
+    .form__title {
+        font-size: 24px;
+        line-height: 26px;
+        margin-top: 40px;
+    }
+
+    .form__inputList {
+        margin-top: 40px;
+        gap: 16px;
+    }
+
+    .form__input {
+        width: 365px;
+        height: 45px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .form__button {
+        width: 370px;
+        height: 60px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .form__subtext {
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .feedback {
+        display: grid;
+        gap: 30px;
+    }
+
+    .feedback__textBlock {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .feedback__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .feedback__text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .form {
+        width: 300px;
+        height: 350px;
+    }
+
+    .form__title {
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 30px;
+    }
+
+    .form__inputList {
+        margin-top: 30px;
+        gap: 8px;
+    }
+
+    .form__input {
+        width: 265px;
+        height: 30px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .form__button {
+        width: 270px;
+        height: 40px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .form__subtext {
+        margin-top: 30px;
+        font-size: 10px;
+        line-height: 12px;
+    }
 }
