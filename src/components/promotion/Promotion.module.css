@@ -1,0 +1,71 @@
+.promotion {
+    margin-top: 100px;
+    font-family: 'RalewayRegular';
+    font-style: normal;
+    color: #565656;
+}
+
+.promotion__title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 46px;
+    text-align: start;
+}
+
+.promotion__text {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+    margin: 100px auto;
+    width: 60%;
+}
+
+@media screen and (max-width:1440px) {
+    .promotion__title {
+        font-size: 40px;
+        line-height: 42px;
+    }
+    
+    .promotion__text {
+        font-size: 36px;
+        line-height: 38px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .promotion__title {
+        font-size: 22px;
+        line-height: 24px;
+    }
+    
+    .promotion__text {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .promotion__title {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    .promotion__text {
+        width: 70%;
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .promotion__title {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    
+    .promotion__text {
+        width: 90%;
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

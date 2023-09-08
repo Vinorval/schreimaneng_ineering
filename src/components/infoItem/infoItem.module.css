@@ -41,6 +41,18 @@
     margin-left: 20px;
 }
 
+.item__imgBlock {
+    display: flex;
+}
+
+.item__wrapper {
+    width: auto;
+}
+
+.item__image {
+    width: 100%;
+}
+
 .invisible {
     display: none;
 }
@@ -77,5 +89,9 @@
     .item__description {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+    
+    .item__imgBlock {
+        display: block;
     }
 }

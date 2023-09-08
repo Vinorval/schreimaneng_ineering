@@ -16,9 +16,10 @@ function InfoItem({ title, text, textArr, imgArr }) {
 
     const returnImgArr = () => {
         return imgArr.map((item) => {
-            console.log(item)
             return (
-                <img src={item.src} key={item.id} className={Styles.item__image} />
+                <div className={Styles.item__wrapper}>
+                    <img src={item.src} key={item.id} className={Styles.item__image} />
+                </div>
             )
         })
     }
@@ -29,7 +30,7 @@ function InfoItem({ title, text, textArr, imgArr }) {
             { text && 
                 <div className={Styles.item__textBlock}>
                     <p className={Styles.item__text}>{text}</p>
-                    { imgArr && returnImgArr() }
+                    <div className={Styles.item__imgBlock}>{ imgArr && returnImgArr() } </div>
                 </div> 
             }
             { textArr && 

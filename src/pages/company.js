@@ -15,7 +15,9 @@ function Company () {
     return (
         <section className={Styles.company}>
             <Promotion title="КОМПАНИЯ" text="Объединяем опыт и творчество для создания уникальных решений" />
-            {returnInfo()}
+            <ul className={Styles.company__list}>
+                {returnInfo()}
+            </ul>
         </section>
     )
 }
