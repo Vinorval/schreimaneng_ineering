@@ -1,6 +1,8 @@
 .header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 56% 16%;
     justify-content: space-between;
+    justify-items: center;
     margin-top: 65px;
     font-family: 'RalewayRegular';
 }
@@ -42,7 +44,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 22%;
     max-width: 320px;
 }
 
@@ -113,6 +114,15 @@
 
 .burgerMenu__ikon {
     width: 30px;
+}
+
+.basket {
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    text-align: end;
+    width: 100%;
+    grid-column: 3/4;
 }
 
 @media screen and (max-width: 1440px) {

@@ -7,6 +7,7 @@ import Footer from '../footer/Footer';
 import HomePage from '../../pages/home';
 import Company from '../../pages/company';
 import Services from '../../pages/services';
+import News from '../../pages/news';
 import Basket from '../../pages/basket';
 
 import Catalog from '../../pages/catalog';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={ <HomePage /> }/>
         <Route path="/company" element={ <Company /> } />
         <Route path="/services" element={ <Services /> } />
+        <Route path="/news" element={ <News /> } />
         <Route path="/basket" element={ <Basket /> } />
 
         <Route path="/catalog" element={ <Catalog /> } />

@@ -1,7 +1,9 @@
+import Styles from './notFound.module.css';
+
 function NotFound() {
     return (
         <div>
-            <p className='nothing'>По вашему запросу ничего не найдено</p>
+            <p className={Styles.section__text}>По вашему запросу ничего не найдено</p>
         </div>
     )
 }

@@ -26,6 +26,7 @@ const AppHeader = () => {
                         <NavLink to='/services' className={Styles.burgerMenu__link}>УСЛУГИ</NavLink>
                         <NavLink to='/company' className={Styles.burgerMenu__link}>КОМПАНИЯ</NavLink>
                         <NavLink to='/news' className={Styles.burgerMenu__link} >НОВОСТИ</NavLink>
+                        <NavLink to='/basket' className={Styles.burgerMenu__link} >КОРЗИНА</NavLink>
                     </nav>
                     <button className={Styles.burgerMenu__buttonClose} onClick={onClickClose}>
                         <img src={Close} className={Styles.burgerMenu__ikonClose}/>
@@ -51,6 +52,7 @@ const AppHeader = () => {
                     <span className={Styles.contacts__phone_text}>получить консультацию</span>
                 </div>
             </div>
+            <NavLink to='/basket' className={Styles.basket} >КОРЗИНА</NavLink>
         </header>
     )
 }
