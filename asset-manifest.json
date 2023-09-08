@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/schreimaneng_ineering/static/css/main.bff6600c.css",
+    "main.css": "/schreimaneng_ineering/static/css/main.6bbcd6c1.css",
     "main.js": "/schreimaneng_ineering/static/js/main.58010c57.js",
     "static/js/787.f60c5ca6.chunk.js": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js",
     "static/media/map.jpg": "/schreimaneng_ineering/static/media/map.a2ff11934878f3406cd0.jpg",
@@ -17,12 +17,12 @@
     "static/media/icon-telegram.svg": "/schreimaneng_ineering/static/media/icon-telegram.3ae54a51076ce9681e7665b6ebc8d780.svg",
     "static/media/Logo.svg": "/schreimaneng_ineering/static/media/Logo.2b4764a81d5f6be0da3831efa3d91640.svg",
     "index.html": "/schreimaneng_ineering/index.html",
-    "main.bff6600c.css.map": "/schreimaneng_ineering/static/css/main.bff6600c.css.map",
+    "main.6bbcd6c1.css.map": "/schreimaneng_ineering/static/css/main.6bbcd6c1.css.map",
     "main.58010c57.js.map": "/schreimaneng_ineering/static/js/main.58010c57.js.map",
     "787.f60c5ca6.chunk.js.map": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bff6600c.css",
+    "static/css/main.6bbcd6c1.css",
     "static/js/main.58010c57.js"
   ]
 }
