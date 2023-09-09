@@ -4,23 +4,24 @@ import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import { NavLink, useLocation } from "react-router-dom";
 
 const Product = () => {
-    const { products } = useSelector( store => ({ products: store.products }) );
+    const { products } = useSelector( store => ({ products: store.products.products }) );
     const location = useLocation();
     console.log(products)
-    console.log(location.pathname)
+    console.log(location.pathname.slice(-4))
 
-    //const product = products = [] ? products.find(item => `/catalog/controlPanel/${item._id}` == location.pathname) : '';
 
-    //console.log(product);
+    const product = products != [] ? products.find(item => item._id == location.pathname.slice(-4)) : '';
+
+    console.log(product);
 
     return (
         <section className={Styles.product} >
-            <h2 className={Styles.product__title}>Щит управления ABU-PVZ-E-1-Z-1,7-15</h2>
+            <h2 className={Styles.product__title}>Щит управления {product.name}</h2>
             <div className={Styles.description} >
                 <img className={Styles.description__image} src={Item} />
                 <div className={Styles.description__textBlock} >
-                    <p className={Styles.description__text} >Арт. 00-00057143</p>
-                    <p className={Styles.description__text} >Серия: Щиты для воздушных завес, PVZ <br />Назначение: управление тепловой завесой электрическим калорифером<br />Материал корпуса: пластик<br />Перечень КИПиА: контроллер<br />Тип контроллера / терморегулятора: Zentec M100< br />Предельная номинальная мощность электродвигателя: 1.7 кВт</p>
+                    <p className={Styles.description__text} >{product._id}</p>
+                    <p className={Styles.description__text} >{product.description}</p>
                 </div>
                 <div className={Styles.description__order} >
                     <p className={Styles.description__price} >56 888 р.</p>
@@ -37,31 +38,31 @@ const Product = () => {
                         </li>
                         <li className={Styles.detail__item} >
                             <p className={Styles.detail__nameText} >Категория</p>
-                            <p className={Styles.detail__valueText} >Щиты управления</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.category}</p>
                         </li>
                         <li className={Styles.detail__item} >
                             <p className={Styles.detail__nameText} >Серия</p>
-                            <p className={Styles.detail__valueText} >Щиты для воздушных завес, PVZ</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.series}</p>
                         </li>
                         <li className={Styles.detail__item} >
                             <p className={Styles.detail__nameText} >Гарантия</p>
-                            <p className={Styles.detail__valueText} >18 мес.</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.warranty} мес.</p>
                         </li>
                         <li className={Styles.detail__item} >
                             <p className={Styles.detail__nameText} >Масса</p>
-                            <p className={Styles.detail__valueText} >8.2 кг</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.weight}</p>
                         </li>
                         <li className={Styles.detail__item} >
                             <p className={Styles.detail__nameText} >Объем</p>
-                            <p className={Styles.detail__valueText} >0.029 м³</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.volume}</p>
                         </li>
                         <li className={Styles.detail__item} >
                             <p className={Styles.detail__nameText} >Производитель</p>
-                            <p className={Styles.detail__valueText} >НЕВАТОМ</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.fabricator}</p>
                         </li>
                         <li className={Styles.detail__item}>
                             <p className={Styles.detail__nameText} >Страна производства</p>
-                            <p className={Styles.detail__valueText} >Россия</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.country}</p>
                         </li>
                     </ul>
                 </div>
