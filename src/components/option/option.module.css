@@ -1,0 +1,23 @@
+.option__label {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.option__item {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: start;
+}
+
+.option__image {
+    width: 144px;
+}
+
+.option__text {
+    width: 40%;
+}
+
+.option__shop {
+    width: 20%;
+}

@@ -1,0 +1,188 @@
+const optoins = [
+    {
+        _id: '0001',
+        name: 'Датчик температуры гильзовый TD-G-0-IP54-NTC10k',
+        description: 'Серия: Датчики температуры TD; Производитель: Вентикс; Тип: гильзовый; Номинальное сопротивление датчика: 10 кОм; Класс защиты: IP54.',
+        characteristic: {
+            productGroup: 'Не нужно указывать',
+            category: 'Приборы автоматики',
+            series: 'Датчики температуры TD',
+            warranty: 24,
+            weight: '0.1 кг',
+            volume: '0.0001 м3',
+            fabricator: 'Schreiman Engineering',
+            country: 'Россия',
+        },
+        designCharacteristics: {
+            execution: 'Общепромышленное',
+            type: 'гильзовый',
+            nominalResistance: '10кОм',
+        },
+        climaticCharacteristics: {
+            temperature: 'до -70 °С',
+        },
+    },
+    {
+        _id: '0002',
+        name: 'Пульт управления ЩУ',
+        description: 'Серия: Пульты дистанционного управления;',
+        characteristic: {
+            productGroup: 'Не нужно указывать',
+            category: 'Приборы автоматики',
+            series: 'Пульты дистанционного управления',
+            warranty: 24,
+            weight: '0.3 кг',
+            volume: '0.0005 м3',
+            fabricator: 'Schreiman Engineering',
+            country: 'Россия',
+        },
+        designCharacteristics: {
+            execution: 'Общепромышленное',
+            type: '',
+            nominalResistance: '',
+        },
+        climaticCharacteristics: {
+            temperature: 'от 5 до 28 °С',
+        },
+    },
+    {
+        _id: '0003',
+        name: 'Реле перепада давления PS500',
+        description: 'Серия: Реле перепада давления PS; Диапазон измерения перепада давления: 0-1500',
+        characteristic: {
+            productGroup: 'Не нужно указывать',
+            category: 'Приборы автоматики',
+            series: 'Реле перепада давления PS',
+            warranty: 24,
+            weight: '0.2 кг',
+            volume: '0.0015 м3',
+            fabricator: 'Schreiman Engineering',
+            country: 'Россия',
+        },
+        designCharacteristics: {
+            execution: 'Общепромышленное',
+            type: '',
+            nominalResistance: '',
+        },
+        climaticCharacteristics: {
+            temperature: 'до -70 °С',
+        },
+    },
+    {
+        _id: '0004',
+        name: 'Частотный преобразователь',
+        description: '',
+        characteristic: {
+            productGroup: 'Не нужно указывать',
+            category: 'Приборы автоматики',
+            series: '',
+            warranty: 24,
+            weight: '',
+            volume: '',
+            fabricator: 'Schreiman Engineering',
+            country: 'Россия',
+        },
+        designCharacteristics: {
+            execution: 'Общепромышленное',
+            type: '',
+            nominalResistance: '',
+        },
+        climaticCharacteristics: {
+            temperature: '',
+        },
+    },
+    {
+        _id: '0005',
+        name: 'Пульт дистанционного управления ПДУ-БК',
+        description: '',
+        characteristic: {
+            productGroup: 'Не нужно указывать',
+            category: 'Приборы автоматики',
+            series: '',
+            warranty: 24,
+            weight: '',
+            volume: '',
+            fabricator: 'Schreiman Engineering',
+            country: 'Россия',
+        },
+        designCharacteristics: {
+            execution: 'Общепромышленное',
+            type: '',
+            nominalResistance: '',
+        },
+        climaticCharacteristics: {
+            temperature: '',
+        },
+    },
+    {
+        _id: '0006',
+        name: 'Привод воздушной заслонки????',
+        description: '',
+        characteristic: {
+            productGroup: 'Не нужно указывать',
+            category: 'Приборы автоматики',
+            series: '',
+            warranty: 24,
+            weight: '',
+            volume: '',
+            fabricator: 'Schreiman Engineering',
+            country: 'Россия',
+        },
+        designCharacteristics: {
+            execution: 'Общепромышленное',
+            type: '',
+            nominalResistance: '',
+        },
+        climaticCharacteristics: {
+            temperature: '',
+        },
+    },
+    {
+        _id: '0007',
+        name: 'Пульт дистанционного управления ПДУ-К',
+        description: '',
+        characteristic: {
+            productGroup: 'Не нужно указывать',
+            category: 'Приборы автоматики',
+            series: '',
+            warranty: 24,
+            weight: '',
+            volume: '',
+            fabricator: 'Schreiman Engineering',
+            country: 'Россия',
+        },
+        designCharacteristics: {
+            execution: 'Общепромышленное',
+            type: '',
+            nominalResistance: '',
+        },
+        climaticCharacteristics: {
+            temperature: '',
+        },
+    },
+    {
+        _id: '0008',
+        name: 'Датчик температуры уличный',
+        description: '',
+        characteristic: {
+            productGroup: 'Не нужно указывать',
+            category: 'Приборы автоматики',
+            series: '',
+            warranty: 24,
+            weight: '',
+            volume: '',
+            fabricator: 'Schreiman Engineering',
+            country: 'Россия',
+        },
+        designCharacteristics: {
+            execution: 'Общепромышленное',
+            type: '',
+            nominalResistance: '',
+        },
+        climaticCharacteristics: {
+            temperature: '',
+        },
+    },
+]
+
+export default optoins;

@@ -1,6 +1,9 @@
 import { 
     GET_PRODUCTS_SUCCESS, 
     GET_PRODUCTS_FAILED, 
+    ADD_PRODUCT_SUCCESS,
+    ADD_OPTION_SUCCESS,
+    DELETE_OPTION_SUCCESS,
     GET_ORDER_SUCCESS, 
     GET_ORDER_FAILED,
     CLOSE_POPUP,
@@ -9,6 +12,8 @@ import {
 const initialState= {
     products: [],
     productsFailed: false,
+
+    product: [],
 
     order: [],
     orderFailed: false,
@@ -23,6 +28,15 @@ export const productsReducer = (state = initialState, action) => {
       }
       case GET_PRODUCTS_FAILED: {
         return { ...state, productsFailed: true};
+      }
+      case ADD_PRODUCT_SUCCESS: {
+        return { ...state, product: [action.item] }
+      }
+      case ADD_OPTION_SUCCESS: {
+        return { ...state, product: [...state.product,  action.item] }
+      }
+      case DELETE_OPTION_SUCCESS: {
+        return { ...state, product: [...state.product].filter((item) => item._id !== action._id)  }
       }
       default: {
         return state;

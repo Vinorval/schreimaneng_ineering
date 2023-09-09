@@ -1,11 +1,15 @@
 import Styles from './basket.module.css';
 import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import Item from '../images/товар.jpg';
 import Plus from '../images/4105962-add-expand-plus_113920.svg';
 import Minus from '../images/4105964-collapse-minus-reduce-remove_113927.svg';
 import Del from '../images/bin_delete_file_garbage_recycle_remove_trash_icon_123192.svg';
 
 function Basket() {
+    //const { product } = useSelector( store => ({ product: store.products.product }) );
+    //console.log(product);
+
     return (
         <section className={Styles.basket}>
             <h2 className={Styles.basket__title}>Корзина</h2>

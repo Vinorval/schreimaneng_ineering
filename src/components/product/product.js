@@ -1,18 +1,34 @@
+import React, { useState } from "react";
 import Styles from './product.module.css';
 import Item from '../../images/товар.jpg';
 import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import { NavLink, useLocation } from "react-router-dom";
+import { addProductSuccess, addOptionSuccess } from '../../services/actions/actions';
+import optoins from "../../utils/options";
+import Option from "../option/option";
 
 const Product = () => {
+    const dispatch = useDispatch();
+
     const { products } = useSelector( store => ({ products: store.products.products }) );
     const location = useLocation();
     console.log(products)
-    console.log(location.pathname.slice(-4))
-
 
     const product = products != [] ? products.find(item => item._id == location.pathname.slice(-4)) : '';
+    React.useEffect(() => {
+        dispatch(addProductSuccess(product));
+    }, [dispatch]);
 
-    console.log(product);
+    const returnOptions = () => {
+        return product.options.map((item, index) => {
+
+            return optoins.map((el) => {
+                return el.name == item && (
+                    <Option key={el._id} el={el} name={el.name} description={el.description} />
+                )
+            })
+        })
+    }
 
     return (
         <section className={Styles.product} >
@@ -129,21 +145,7 @@ const Product = () => {
             <div className={Styles.option} >
                 <h3 className={Styles.option__title} >Опции</h3>
                 <ul className={Styles.option__list} >
-                    <label htmlFor="V" className={Styles.option__label} ><input type="checkbox" id="V" value="V" />
-                        <div className={Styles.option__item} >
-                            <img src={Item}  className={Styles.option__image} />
-                            <div className={Styles.option__text} >
-                                <p>Датчик температуры уличный</p>
-                                <p>Предназначен для непрерывного измерения наружной температуры воздуха (для автоматической смены режима "зима-лето"). </p>
-                                <p>Датчик температуры уличный TD-U-1-IP54-PT1000</p>
-                            </div>
-                            <div className={Styles.option__shop} >
-                                <p> 1 470</p>
-                                <p>в наличии</p>
-                            </div>
-                            <button>Выбрать</button>
-                        </div>
-                    </label>
+                    {product && returnOptions()}
                 </ul>
             </div>
         </section>

@@ -1,7 +1,8 @@
 import { NavLink, useLocation } from "react-router-dom";
+import React, { useState } from "react";
 import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import { productsObj } from "../../utils/products";
-import { getProductSuccess } from "../../services/actions/actions";
+import { getProductSuccess, postOrderSuccess } from "../../services/actions/actions";
 
 import Styles from './productsList.module.css';
 import Item from '../../images/товар.jpg';
@@ -9,6 +10,13 @@ import Item from '../../images/товар.jpg';
 const ProductsList = () => {
     const location = useLocation();
     const dispatch = useDispatch();
+
+    //React.useEffect(() => {
+    //    const { product } = useSelector( store => ({ product: store.products.product }) );
+    //}, [])
+
+    //const { product } = useSelector( store => ({ product: store.products.product }) );
+    //const { product } = useSelector( store => ({ product: store.products.product }) );
 
     const getProductsArr = () => {
         switch (location.pathname) {
@@ -21,6 +29,10 @@ const ProductsList = () => {
             }
         }
     };
+
+    //const postOrder = () => {
+    //    dispatch(postOrderSuccess(product))
+    //}
 
     const returnProduct = () => {
         return getProductsArr().map((item) => {
