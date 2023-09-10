@@ -5,6 +5,7 @@ import Item from '../images/товар.jpg';
 import Plus from '../images/4105962-add-expand-plus_113920.svg';
 import Minus from '../images/4105964-collapse-minus-reduce-remove_113927.svg';
 import Del from '../images/bin_delete_file_garbage_recycle_remove_trash_icon_123192.svg';
+import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
 
 function Basket() {
     //const { product } = useSelector( store => ({ product: store.products.product }) );
@@ -107,6 +108,7 @@ function Basket() {
                 <span className={Styles.summe__subtext} >Цены и сроки рассчитаны на дату и время обновления страницы и являются предварительными.</span>
                 <button className={Styles.summe__subButton} >Оформить заказ</button>
             </div>
+            <ButtonFeedback />
         </section>
     )
 }

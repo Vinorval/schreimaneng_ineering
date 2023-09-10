@@ -1,33 +1,3 @@
-.feedback {
-    margin-top: 150px;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'RalewayRegular';
-    font-style: normal;
-    color: #565656;
-}
-
-.feedback__textBlock {
-    width: 50%;
-}
-
-.feedback__title {
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 46px;
-    text-align: start;
-}
-
-.feedback__text {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    text-align: start;
-    width: 80%;
-}
-
 .form {
     width: 500px;
     height: 700px;
@@ -77,16 +47,6 @@
 }
 
 @media screen and (max-width: 1440px) {
-    .feedback__title {
-        font-size: 32px;
-        line-height: 34px;
-    }
-
-    .feedback__text {
-        font-size: 18px;
-        line-height: 20px;
-    }
-
     .form {
         width: 400px;
         height: 480px;
@@ -124,28 +84,7 @@
     }
 }
 
-@media screen and (max-width:1024px) {
-    .feedback {
-        display: grid;
-        gap: 30px;
-    }
-
-    .feedback__textBlock {
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 480px) {
-    .feedback__title {
-        font-size: 24px;
-        line-height: 26px;
-    }
-
-    .feedback__text {
-        font-size: 14px;
-        line-height: 16px;
-    }
-
     .form {
         width: 300px;
         height: 350px;

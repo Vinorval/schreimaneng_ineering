@@ -2,6 +2,7 @@ import Styles from './company.module.css';
 import Promotion from "../components/promotion/Promotion";
 import InfoItem from '../components/infoItem/infoItem';
 import { companyInfo } from '../utils/utils';
+import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
 
 function Company () {
 
@@ -18,6 +19,7 @@ function Company () {
             <ul className={Styles.company__list}>
                 {returnInfo()}
             </ul>
+            <ButtonFeedback />
         </section>
     )
 }

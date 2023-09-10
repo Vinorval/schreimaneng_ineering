@@ -1,6 +1,8 @@
 .header {
+    width: 95vw;
+    margin: 65px auto 0;
     display: grid;
-    grid-template-columns: 20% 56% 16%;
+    grid-template-columns: 26% 52% 22%;
     justify-content: space-between;
     justify-items: center;
     margin-top: 65px;
@@ -45,6 +47,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 320px;
+    justify-self: end;
 }
 
 .contacts__social {
@@ -145,7 +148,6 @@
     }
 
     .contacts {
-        width: 22%;
         max-width: 230px;
     }
 
@@ -160,6 +162,10 @@
     
     .contacts__phone_text {
         font-size: 12px;
+    }
+    
+    .basket {
+        font-size: 16px;
     }
 }
 
@@ -206,6 +212,10 @@
 }
 
 @media screen and (max-width: 840px) {
+    .header {
+        grid-template-columns: 10% 52% 35%;
+    }
+
     .burgerMenu {
         display: flex;
     }
@@ -223,6 +233,10 @@
     }
 
     .contacts {
+        display: none;
+    }
+
+    .basket {
         display: none;
     }
 }

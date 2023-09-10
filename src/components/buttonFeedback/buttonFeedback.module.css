@@ -1,0 +1,80 @@
+.feedback__buttonForm {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    color: white;
+    background-color: #009845;
+}
+
+.invisible {
+    display: none;
+}
+
+.feedback__blockForm {
+    background-color: white;
+    height: 100vh;
+    width: 45%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+.feedback__closeButton {
+    padding: 0;
+    margin: 50px;
+    width: 64px;
+    height: 64px;
+    justify-self: end;
+    background-color: white;
+    border: none;
+    transform: rotate(45deg);
+}
+
+.feedback__ikonButton {
+    width: 45px;
+}
+
+@media screen and (max-width:1200px) {
+    .feedback__closeButton {
+        margin: 16px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .feedback__blockForm {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .feedback__blockForm {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .feedback__blockForm {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .feedback__closeButton {
+        width: 32px;
+        height: 32px;
+        margin: 0 10px 16px;
+    }
+
+    .feedback__ikonButton {
+        width: 32px;
+    }
+}

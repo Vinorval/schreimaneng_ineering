@@ -2,6 +2,8 @@
   text-align: center;
   max-width: 90%;
   margin: auto;
+  display: grid;
+  justify-content: center;
 }
 
 @media screen and (max-width: 480px) {
