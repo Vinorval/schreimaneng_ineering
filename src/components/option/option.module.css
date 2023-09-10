@@ -1,13 +1,15 @@
 .option__label {
     display: flex;
     width: 80%;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
 .option__item {
     display: flex;
     justify-content: space-evenly;
     text-align: start;
+    width: 95%;
 }
 
 .option__image {
@@ -20,4 +22,16 @@
 
 .option__shop {
     width: 20%;
+}
+
+.option__button {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    width: 80px;
+    align-self: center;
+    color: white;
+    background-color: #009845;
+    border: none;
+    border-radius: 10%;
 }

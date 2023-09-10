@@ -11,19 +11,19 @@ function CatalogItems() {
         <section className="catalog">
             <h2 className="catalog__title">ПРОДУКЦИЯ</h2>
             <nav className="catalog__items">
-                <NavLink to="/catalog/controlPanel" className="itemPr">
+                <NavLink to="/schreimaneng_ineering/catalog/controlPanel" className="itemPr">
                     <img className="itemPr_image" src={controlPanel} />
                     <p className="itemPr__name">Щиты управления</p>
                 </NavLink>
-                <NavLink to="/catalog/autoDevice" className="itemPr">
+                <NavLink to="/schreimaneng_ineering/catalog/autoDevice" className="itemPr">
                     <img className="itemPr_image" src={autoDevice} />
                     <p className="itemPr__name">Приборы автоматики</p>
                 </NavLink>
-                <NavLink to="/catalog/regulator" className="itemPr">
+                <NavLink to="/schreimaneng_ineering/catalog/regulator" className="itemPr">
                     <img className="itemPr_image" src={regulator} />
                     <p className="itemPr__name">Регуляторы</p>
                 </NavLink>
-                <NavLink to="/catalog/mixUnits" className="itemPr">
+                <NavLink to="/schreimaneng_ineering/catalog/mixUnits" className="itemPr">
                     {/*<img className="item_image" src={} />*/}
                     <p className="itemPr__name">Смесительные узлы</p>
                 </NavLink>

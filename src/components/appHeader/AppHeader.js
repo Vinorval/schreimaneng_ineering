@@ -21,28 +21,28 @@ const AppHeader = () => {
                 <button onClick={onClickBurger} className={Styles.burgerMenu__button} ><img src={Menu} className={Styles.burgerMenu__ikon} /></button>
                 <div className={`${showNavigate ? Styles.burgerMenu_visible : Styles.burgerMenu_invisible}`}>
                     <nav className={Styles.burgerMenu__navigation}>
-                        <NavLink to='/' className={Styles.burgerMenu__link}>ГЛАВНАЯ</NavLink>
-                        <NavLink to='/catalog' className={Styles.burgerMenu__link}>ПРОДУКЦИЯ</NavLink>
-                        <NavLink to='/services' className={Styles.burgerMenu__link}>УСЛУГИ</NavLink>
-                        <NavLink to='/company' className={Styles.burgerMenu__link}>КОМПАНИЯ</NavLink>
-                        <NavLink to='/news' className={Styles.burgerMenu__link} >НОВОСТИ</NavLink>
-                        <NavLink to='/basket' className={Styles.burgerMenu__link} >КОРЗИНА</NavLink>
+                        <NavLink to='/schreimaneng_ineering' className={Styles.burgerMenu__link}>ГЛАВНАЯ</NavLink>
+                        <NavLink to='/schreimaneng_ineering/catalog' className={Styles.burgerMenu__link}>ПРОДУКЦИЯ</NavLink>
+                        <NavLink to='/schreimaneng_ineering/services' className={Styles.burgerMenu__link}>УСЛУГИ</NavLink>
+                        <NavLink to='/schreimaneng_ineering/company' className={Styles.burgerMenu__link}>КОМПАНИЯ</NavLink>
+                        <NavLink to='/schreimaneng_ineering/news' className={Styles.burgerMenu__link} >НОВОСТИ</NavLink>
+                        <NavLink to='/schreimaneng_ineering/basket' className={Styles.burgerMenu__link} >КОРЗИНА</NavLink>
                     </nav>
                     <button className={Styles.burgerMenu__buttonClose} onClick={onClickClose}>
                         <img src={Close} className={Styles.burgerMenu__ikonClose}/>
                     </button>
                 </div>
             </div>
-            <NavLink to='/' className={Styles.logo}>
+            <NavLink to='/schreimaneng_ineering' className={Styles.logo}>
                 <img src={Logo} className={Styles.logo__image} />
                 <h2 className={Styles.logo__text}>SCHREIMAN <br /> ENGINEERING</h2>
             </NavLink>
             <nav className={Styles.navigate}>
-                <NavLink to='/' className={Styles.navigate__link}>ГЛАВНАЯ</NavLink>
-                <NavLink to='/catalog' className={Styles.navigate__link}>ПРОДУКЦИЯ</NavLink>
-                <NavLink to='/services' className={Styles.navigate__link}>УСЛУГИ</NavLink>
-                <NavLink to='/company' className={Styles.navigate__link}>КОМПАНИЯ</NavLink>
-                <NavLink to='/news' className={Styles.navigate__link} >НОВОСТИ</NavLink>
+                <NavLink to='/schreimaneng_ineering' className={Styles.navigate__link}>ГЛАВНАЯ</NavLink>
+                <NavLink to='/schreimaneng_ineering/catalog' className={Styles.navigate__link}>ПРОДУКЦИЯ</NavLink>
+                <NavLink to='/schreimaneng_ineering/services' className={Styles.navigate__link}>УСЛУГИ</NavLink>
+                <NavLink to='/schreimaneng_ineering/company' className={Styles.navigate__link}>КОМПАНИЯ</NavLink>
+                <NavLink to='/schreimaneng_ineering/news' className={Styles.navigate__link} >НОВОСТИ</NavLink>
             </nav>
             <div className={Styles.contacts}>
                 <a><img src={WhatsApp} className={Styles.contacts__social}/></a>
@@ -52,7 +52,7 @@ const AppHeader = () => {
                     <span className={Styles.contacts__phone_text}>получить консультацию</span>
                 </div>
             </div>
-            <NavLink to='/basket' className={Styles.basket} >КОРЗИНА</NavLink>
+            <NavLink to='/schreimaneng_ineering/basket' className={Styles.basket} >КОРЗИНА</NavLink>
         </header>
     )
 }

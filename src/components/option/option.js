@@ -32,7 +32,7 @@ const Option = ({ el, name, description }) => {
                     <p> 1 470</p>
                     <p>в наличии</p>
                 </div>
-                <button>Выбрать</button>
+                <button className={Styles.option__button}>Выбрать</button>
             </div>
         </label>
     )

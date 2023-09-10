@@ -20,7 +20,7 @@ const ProductsList = () => {
 
     const getProductsArr = () => {
         switch (location.pathname) {
-            case '/catalog/controlPanel': {
+            case '/schreimaneng_ineering/catalog/controlPanel': {
                 dispatch(getProductSuccess(productsObj.controlPanel));
                 return productsObj.controlPanel
             }
@@ -37,7 +37,7 @@ const ProductsList = () => {
     const returnProduct = () => {
         return getProductsArr().map((item) => {
                 return (
-                    <NavLink key={item._id} to={`/catalog/controlPanel/${item._id}`} className={Styles.item}>
+                    <NavLink key={item._id} to={`/schreimaneng_ineering/catalog/controlPanel/${item._id}`} className={Styles.item}>
                         <img className={Styles.item__image} src={Item} />
                         <div className={Styles.item__description} >
                             <h3 className={Styles.item__name} >Щит управления {item.name}</h3>

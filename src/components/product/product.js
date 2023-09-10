@@ -6,6 +6,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { addProductSuccess, addOptionSuccess } from '../../services/actions/actions';
 import optoins from "../../utils/options";
 import Option from "../option/option";
+import Popup from "../popup/popup";
 
 const Product = () => {
     const dispatch = useDispatch();

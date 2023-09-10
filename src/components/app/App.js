@@ -21,16 +21,16 @@ function App() {
     <div className={Styles.app}>
       <AppHeader></AppHeader>
       <Routes>
-        <Route path="/" element={ <HomePage /> }/>
-        <Route path="/company" element={ <Company /> } />
-        <Route path="/services" element={ <Services /> } />
-        <Route path="/news" element={ <News /> } />
-        <Route path="/basket" element={ <Basket /> } />
+        <Route path="/schreimaneng_ineering" element={ <HomePage /> }/>
+        <Route path="/schreimaneng_ineering/company" element={ <Company /> } />
+        <Route path="/schreimaneng_ineering/services" element={ <Services /> } />
+        <Route path="/schreimaneng_ineering/news" element={ <News /> } />
+        <Route path="/schreimaneng_ineering/basket" element={ <Basket /> } />
 
-        <Route path="/catalog" element={ <Catalog /> } />
-        <Route path="/catalog/:product" element={ <Product /> } />
+        <Route path="/schreimaneng_ineering/catalog" element={ <Catalog /> } />
+        <Route path="/schreimaneng_ineering/catalog/:product" element={ <Product /> } />
 
-        <Route path="/catalog/:product/:itemId" element={ <Item /> } />
+        <Route path="/schreimaneng_ineering/catalog/:product/:itemId" element={ <Item /> } />
         <Route path='*' element={ <NotFound /> } />
       </Routes>
       <Footer></Footer>
