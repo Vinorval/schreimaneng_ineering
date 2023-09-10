@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/schreimaneng_ineering/static/css/main.33bf1a8d.css",
-    "main.js": "/schreimaneng_ineering/static/js/main.3e30a156.js",
+    "main.css": "/schreimaneng_ineering/static/css/main.8b328ca1.css",
+    "main.js": "/schreimaneng_ineering/static/js/main.d3ce3b14.js",
     "static/js/787.f60c5ca6.chunk.js": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js",
     "static/media/map.jpg": "/schreimaneng_ineering/static/media/map.a2ff11934878f3406cd0.jpg",
     "static/media/certificate_1.png": "/schreimaneng_ineering/static/media/certificate_1.f211e55fda45f1d265b3.png",
@@ -20,12 +20,12 @@
     "static/media/bin_delete_file_garbage_recycle_remove_trash_icon_123192.svg": "/schreimaneng_ineering/static/media/bin_delete_file_garbage_recycle_remove_trash_icon_123192.bed8c76b9a799976f3e002651f5592ea.svg",
     "static/media/4105962-add-expand-plus_113920.svg": "/schreimaneng_ineering/static/media/4105962-add-expand-plus_113920.2e386d62e2d84f3ccc11ef0b718c01fa.svg",
     "static/media/4105964-collapse-minus-reduce-remove_113927.svg": "/schreimaneng_ineering/static/media/4105964-collapse-minus-reduce-remove_113927.879df8cc2610f505f8bc42db52145f2c.svg",
-    "main.33bf1a8d.css.map": "/schreimaneng_ineering/static/css/main.33bf1a8d.css.map",
-    "main.3e30a156.js.map": "/schreimaneng_ineering/static/js/main.3e30a156.js.map",
+    "main.8b328ca1.css.map": "/schreimaneng_ineering/static/css/main.8b328ca1.css.map",
+    "main.d3ce3b14.js.map": "/schreimaneng_ineering/static/js/main.d3ce3b14.js.map",
     "787.f60c5ca6.chunk.js.map": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33bf1a8d.css",
-    "static/js/main.3e30a156.js"
+    "static/css/main.8b328ca1.css",
+    "static/js/main.d3ce3b14.js"
   ]
 }
