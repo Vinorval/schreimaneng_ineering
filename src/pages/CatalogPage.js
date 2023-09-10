@@ -1,7 +1,7 @@
 import CatalogItems from "../components/catalog/catalog";
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
-function Catalog() {
+const CatalogPage = () => {
     return (
         <>
             <CatalogItems />
@@ -10,4 +10,4 @@ function Catalog() {
     )
 }
 
-export default Catalog;
+export default CatalogPage;

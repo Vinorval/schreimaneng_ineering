@@ -1,7 +1,7 @@
-import Styles from './notFound.module.css';
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import Styles from './NotFoundPage.module.css';
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
-function NotFound() {
+const NotFoundPage = () => {
     return (
         <div>
             <p className={Styles.section__text}>По вашему запросу ничего не найдено</p>
@@ -10,4 +10,4 @@ function NotFound() {
     )
 }
 
-export default NotFound;
+export default NotFoundPage;

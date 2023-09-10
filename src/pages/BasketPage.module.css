@@ -56,8 +56,9 @@
 
 .item__image {
     width: 144px;
-    height: 100%;
+    height: 144px;
     border-radius: 2%;
+    object-fit: cover;
 }
 
 .item__description {
@@ -147,4 +148,85 @@
     width: 300px;
     margin: auto;
     font-size: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+    .basket {
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+
+    .summe {
+        grid-column: 1;
+        max-width: 500px;
+        margin: auto;
+        grid-row: 4;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .item {
+        display: grid;
+        grid-template-columns: 144px 440px 200px;
+        grid-template-rows: 144px 100px;
+        height: 244px;
+    }
+
+    .item__description {
+        justify-self: start;
+        width: 100%;
+    }
+
+    .item__quantity {
+        grid-column: 2/3;
+        justify-content: space-evenly;
+    }
+
+    .item__data {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .item {
+        grid-template-columns: 144px 67%;
+        grid-template-rows: 144px 100px;
+        position: relative;
+    }
+
+    .item__price {
+        display: none;
+    }
+
+    .item__quantity {
+        grid-row: 2;
+    }
+
+    .basket__delButten {
+        position: absolute;
+        top: 60px;
+        right: 7px;
+    }
+
+    .summe {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .item {
+        max-width: 310px;
+        grid-template-columns: 100px 200px;
+    }
+
+    .item__image {
+        width: 100px;
+    }
+
+    .summe {
+        max-width: 300px;
+        padding: 5px;
+    }
 }

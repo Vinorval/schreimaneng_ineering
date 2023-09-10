@@ -1,13 +1,13 @@
-import Styles from './basket.module.css';
+import Styles from './BasketPage.module.css';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import Item from '../images/товар.jpg';
 import Plus from '../images/4105962-add-expand-plus_113920.svg';
 import Minus from '../images/4105964-collapse-minus-reduce-remove_113927.svg';
 import Del from '../images/bin_delete_file_garbage_recycle_remove_trash_icon_123192.svg';
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
-function Basket() {
+const BasketPage = () => {
     //const { product } = useSelector( store => ({ product: store.products.product }) );
     //console.log(product);
 
@@ -32,7 +32,7 @@ function Basket() {
                         <button className={Styles.item__count}><img src={Plus} /></button>
                         <p className={Styles.item__price} >₽ 112 620</p>
                     </div>
-                    <div>
+                    <div className={Styles.item__data}>
                         <p>Ближайщая готовность:</p>
                         <p>11.09.2023</p>
                     </div>
@@ -51,7 +51,7 @@ function Basket() {
                         <button className={Styles.item__count} ><img src={Plus} /></button>
                         <p className={Styles.item__price} >₽ 112 620</p>
                     </div>
-                    <div>
+                    <div className={Styles.item__data}>
                         <p>Ближайщая готовность:</p>
                         <p>11.09.2023</p>
                     </div>
@@ -70,7 +70,7 @@ function Basket() {
                         <button className={Styles.item__count} ><img src={Plus} /></button>
                         <p className={Styles.item__price} >₽ 112 620</p>
                     </div>
-                    <div>
+                    <div className={Styles.item__data}>
                         <p>Ближайщая готовность:</p>
                         <p>11.09.2023</p>
                     </div>
@@ -113,4 +113,4 @@ function Basket() {
     )
 }
 
-export default Basket;
+export default BasketPage;

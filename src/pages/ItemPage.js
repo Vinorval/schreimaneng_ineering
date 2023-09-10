@@ -1,7 +1,7 @@
 import Product from "../components/product/product";
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
-function Item() {
+const ItemPage = () => {
     return (
         <>
             <Product />
@@ -10,4 +10,4 @@ function Item() {
     )
 }
 
-export default Item;
+export default ItemPage;

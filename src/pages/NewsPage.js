@@ -1,7 +1,7 @@
 import Promotion from "../components/promotion/Promotion";
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
-const News = () => {
+const NewsPage = () => {
     return (
         <>
             <Promotion title="НОВОСТИ" text="Все новости и акции компании" />
@@ -10,4 +10,4 @@ const News = () => {
     )
 }
 
-export default News;
+export default NewsPage;

@@ -1,7 +1,7 @@
 import ProductsList from "../components/productsList/productsList";
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
-function Product() {
+const ProductsListPage = () => {
     return (
         <>
             <ProductsList />
@@ -10,4 +10,4 @@ function Product() {
     )
 }
 
-export default Product;
+export default ProductsListPage;

@@ -1,6 +1,6 @@
 import Styles from './Promo.module.css';
 
-function Promo() {
+const Promo = () => {
     return (
         <section className={Styles.promo}>
             <h2 className={Styles.promo__title}>Автоматизируем объекты любой сложности</h2>

@@ -1,7 +1,7 @@
 import Styles from './Feedback.module.css';
 import Form from '../form/form';
 
-function Feedback() {
+const Feedback = () => {
     return (
         <section className={Styles.feedback}>
             <div className={Styles.feedback__textBlock}>

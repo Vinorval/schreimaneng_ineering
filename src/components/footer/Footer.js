@@ -2,7 +2,7 @@ import Styles from './Footer.module.css';
 import WhatsApp from '../../images/icon-whatsapp.svg';
 import Telegram from '../../images/icon-telegram.svg';
 
-function Footer() {
+const Footer = () => {
     return (
         <footer className={Styles.footer}>
             <p className={Styles.footer__text}>с 2032. Все права защищены.<br />Политика конфидициальности</p>

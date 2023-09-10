@@ -1,6 +1,6 @@
 import Styles from './infoItem.module.css';
 
-function InfoItem({ title, text, textArr, imgArr }) {
+const InfoItem = ({ title, text, textArr, imgArr }) => {
 
     const returnTextArr = () => {
         return textArr.map((item) => {

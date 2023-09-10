@@ -1,10 +1,10 @@
-import Styles from './company.module.css';
+import Styles from './CompanyPage.module.css';
 import Promotion from "../components/promotion/Promotion";
 import InfoItem from '../components/infoItem/infoItem';
 import { companyInfo } from '../utils/utils';
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
-function Company () {
+const CompanyPage = () => {
 
     const returnInfo = () => {
         return companyInfo.map( (item) => {
@@ -24,4 +24,4 @@ function Company () {
     )
 }
 
-export default Company;
+export default CompanyPage;

@@ -1,7 +1,7 @@
 import Styles from './Delivery.module.css';
 import Map from '../../images/map.jpg';
 
-function Delivery() {
+const Delivery = () => {
     return (
         <section className={Styles.delivery}>
             <h2 className={Styles.delivery__title}>Работаем по всей России</h2>

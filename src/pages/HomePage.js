@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from './home.module.css';
+import Styles from './HomePage.module.css';
 import Promo from '../components/promo/Promo';
 import Delivery from '../components/delivery/Delivery';
 import Feedback from '../components/feedback/Feedback';
@@ -9,9 +9,9 @@ import { advantagesList } from "../utils/utils";
 import FormButton from '../images/icons8-форма-50.png';
 import Close from '../images/4105962-add-expand-plus_113920.svg';
 import Form from "../components/form/form";
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
-function HomePage() {
+const HomePage = () => {
     //const [ showForm, setShowForm] = useState(false);
 
     //const onClickButton = () => setShowForm(true);

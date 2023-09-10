@@ -1,6 +1,6 @@
 import Styles from './Promotion.module.css';
 
-function Promotion({title, text}) {
+const Promotion = ({title, text}) => {
     return (
         <section className={Styles.promotion}>
             <h2 className={Styles.promotion__title}>{title}</h2>

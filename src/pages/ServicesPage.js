@@ -1,11 +1,11 @@
 import Promotion from "../components/promotion/Promotion";
 import InfoItem from "../components/infoItem/infoItem";
-import Styles from './services.module.css';
-import ButtonFeedback from "../components/buttonFeedback/buttonFeesbsck";
+import Styles from './ServicesPage.module.css';
+import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
 import { servicesList } from "../utils/utils";
 
-function Services() {
+const ServicesPage = () => {
     return (
         <>
             <Promotion title="УСЛУГИ" text="Объединяем опыт и творчество для создания уникальных решений" />
@@ -18,4 +18,4 @@ function Services() {
     )
 }
 
-export default Services;
+export default ServicesPage;
