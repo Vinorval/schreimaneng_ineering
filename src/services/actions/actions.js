@@ -7,12 +7,12 @@ export const DELETE_OPTION_SUCCESS = 'DELETE_OPTION_SUCCESS';
 
 export const GET_ORDER_SUCCESS = 'GET_ORDER_SUCCESS';
 export const GET_ORDER_FAILED = 'GET_ORDER_FAILED';
+export const DELETE_ORDER = 'DELETE_ORDER';
 export const CLOSE_POPUP = 'CLOSE_POPUP';
 
-export const getProductSuccess = (items) => {
+export const getProductSuccess = () => {
     return {
       type: GET_PRODUCTS_SUCCESS,
-      items: items
     };
 };
 
@@ -33,7 +33,7 @@ export const addOptionSuccess = (item) => {
 export const deleteOptionSuccess = (item) => {
   return {
     type: DELETE_OPTION_SUCCESS,
-    _id: item._id,
+    _id: item,
   }
 }
   
@@ -57,8 +57,15 @@ export const postOrderSuccess = (order) => {
       order: order
     };
 };
+
+export const deleteOrder = (order) => {
+  return {
+    type: DELETE_ORDER,
+    order: order,
+  };
+}
   
-const postOrderFailed = () => {
+export const postOrderFailed = () => {
     return {
       type: GET_ORDER_FAILED
     };

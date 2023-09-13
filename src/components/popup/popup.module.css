@@ -1,9 +1,13 @@
+.invisible {
+    display: none;
+}
+
 .popup {
     position: absolute;
     top: 0;
     right: 0;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
 }
@@ -13,7 +17,7 @@
     margin: 150px auto 0;
     display: grid;
     gap: 40px;
-    grid-template-rows: 5% 15% 73%;
+    grid-template-rows: 5% 15% 5%;
     background-color: white;
     border: 1px solid;
 }
@@ -97,4 +101,14 @@
 .option__list {
     margin: 0;
     padding: 0;
+}
+
+.item__button {
+    width: 160px;
+    height: 54px;
+    font-size: 20px;
+    background-color: #009845;
+    border: none;
+    color: white;
+    justify-self: center;
 }

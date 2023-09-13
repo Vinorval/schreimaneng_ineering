@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
 import Styles from './App.module.css';
 
 import AppHeader from '../appHeader/AppHeader';
@@ -17,6 +18,10 @@ import {
 } from '../../pages/index';
 
 const App = () => {
+  //const { product } = useSelector( store => ({ product: store.products.product }) );
+  const { products } = useSelector( store => ({ products: store.products.products }) );
+  //console.log(products)
+
   return (
     <div className={Styles.app}>
       <AppHeader></AppHeader>

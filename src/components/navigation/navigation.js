@@ -10,6 +10,7 @@ const Navigaiton = ({ show }) => {
             <NavLink to='/schreimaneng_ineering/services' className={show ? Styles.navigate__link : Styles.burgerNavigation__link}>УСЛУГИ</NavLink>
             <NavLink to='/schreimaneng_ineering/company' className={show ? Styles.navigate__link : Styles.burgerNavigation__link}>КОМПАНИЯ</NavLink>
             <NavLink to='/schreimaneng_ineering/news' className={show ? Styles.navigate__link : Styles.burgerNavigation__link} >НОВОСТИ</NavLink>
+            {!show && <NavLink to='/schreimaneng_ineering/basket' className={Styles.burgerNavigation__link} >КОРЗИНА</NavLink>}
         </nav>
     )
 }

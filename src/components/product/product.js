@@ -10,22 +10,41 @@ import Popup from "../popup/popup";
 
 const Product = () => {
     const dispatch = useDispatch();
+    const [show, setShow] = React.useState(false);
 
     const { products } = useSelector( store => ({ products: store.products.products }) );
     const location = useLocation();
-    console.log(products)
+    //console.log(location.pathname.slice(0, 43))
 
-    const product = products != [] ? products.find(item => item._id == location.pathname.slice(-4)) : '';
-    React.useEffect(() => {
-        dispatch(addProductSuccess(product));
-    }, [dispatch]);
+    const findProduct = () => {
+        switch (location.pathname.slice(0, 43)) {
+            case '/schreimaneng_ineering/catalog/controlPanel': {
+                //console.log(products.controlPanel)
+                return products.controlPanel.find(item => item._id == location.pathname.slice(-4))
+            }
+        }
+    }
+
+    const showPopup = () => {
+        setShow(true);
+    }
+
+    const closePopup = () => {
+        
+        setShow(false)
+    }
+
+    const product = findProduct()
+    //React.useEffect(() => {
+    //    dispatch(addProductSuccess(product));
+    //}, [dispatch]);
 
     const returnOptions = () => {
         return product.options.map((item, index) => {
 
             return optoins.map((el) => {
                 return el.name == item && (
-                    <Option key={el._id} el={el} name={el.name} description={el.description} />
+                    <Option key={el._id} el={el} name={el.name} description={el.description} inPopup={show} />
                 )
             })
         })
@@ -42,7 +61,7 @@ const Product = () => {
                 </div>
                 <div className={Styles.description__order} >
                     <p className={Styles.description__price} >56 888 р.</p>
-                    <button type='button' className={Styles.description__button} >Добавить</button>
+                    <button type='button' className={Styles.description__button} onClick={showPopup} >Добавить</button>
                 </div>
             </div>
             <ul className={Styles.detail} >
@@ -149,6 +168,7 @@ const Product = () => {
                     {product && returnOptions()}
                 </ul>
             </div>
+            <Popup show={show} closePopup={closePopup} />
         </section>
     )
 }

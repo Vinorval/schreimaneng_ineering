@@ -7,10 +7,13 @@ import {
     GET_ORDER_SUCCESS, 
     GET_ORDER_FAILED,
     CLOSE_POPUP,
+    DELETE_ORDER
 } from "../actions/actions";
 
+import { productsObj } from "../../utils/products";
+
 const initialState= {
-    products: [],
+    products: productsObj,
     productsFailed: false,
 
     product: [],
@@ -24,7 +27,7 @@ const initialState= {
 export const productsReducer = (state = initialState, action) => {
     switch (action.type) {
       case GET_PRODUCTS_SUCCESS: {
-        return { ...state, products: action.items, productsFailed: false };
+        return { ...state, productsFailed: false };
       }
       case GET_PRODUCTS_FAILED: {
         return { ...state, productsFailed: true};
@@ -36,7 +39,7 @@ export const productsReducer = (state = initialState, action) => {
         return { ...state, product: [...state.product,  action.item] }
       }
       case DELETE_OPTION_SUCCESS: {
-        return { ...state, product: [...state.product].filter((item) => item._id !== action._id)  }
+        return { ...state, product: [...state.product].filter((item) => item !== action._id)  }
       }
       default: {
         return state;
@@ -47,13 +50,16 @@ export const productsReducer = (state = initialState, action) => {
 export const orderReducer = (state = initialState, action) => {
     switch (action.type) {
       case GET_ORDER_SUCCESS: {
-        return { ...state, order: action.order, orderFailed: false };
+        return { ...state, order: [...state.order,  action.order], orderFailed: false };
       }
      case GET_ORDER_FAILED: {
-        return { ...state, orderFailed: true };
+        return { ...state, orderFailed: true, order: [] };
       }
       case CLOSE_POPUP: {
         return { ...state, basketPopup: false }
+      }
+      case DELETE_ORDER: {
+        return { ...state, order: action.order }
       }
       default: {
         return state;

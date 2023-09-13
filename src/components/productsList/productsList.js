@@ -10,9 +10,10 @@ import Item from '../../images/товар.jpg';
 const ProductsList = () => {
     const location = useLocation();
     const dispatch = useDispatch();
+    const { products } = useSelector( store => ({ products: store.products.products }) );
 
     //React.useEffect(() => {
-    //    const { product } = useSelector( store => ({ product: store.products.product }) );
+    //    dispatch(getProductSuccess())
     //}, [])
 
     //const { product } = useSelector( store => ({ product: store.products.product }) );
@@ -21,8 +22,8 @@ const ProductsList = () => {
     const getProductsArr = () => {
         switch (location.pathname) {
             case '/schreimaneng_ineering/catalog/controlPanel': {
-                dispatch(getProductSuccess(productsObj.controlPanel));
-                return productsObj.controlPanel
+                console.log(location.pathname.length)
+                return products.controlPanel
             }
             default: {
                 return [];
