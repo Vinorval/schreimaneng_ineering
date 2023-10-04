@@ -37,20 +37,26 @@ const AppHeader = () => {
                     </button>
                 </div>
             </div>
-            <NavLink to='/schreimaneng_ineering' className={Styles.logo}>
-                <img src={Logo} className={Styles.logo__image} />
-                <h2 className={Styles.logo__text}>SCHREIMAN <br /> ENGINEERING</h2>
-            </NavLink>
-            { width > breakpoint && <Navigaiton show={width > breakpoint} /> }
             <div className={Styles.contacts}>
-                <a><img src={WhatsApp} className={Styles.contacts__social}/></a>
-                <a><img src={Telegram} className={Styles.contacts__social}/></a>
+                <div className={Styles.contacts__socials}>
+                    <a><img src={WhatsApp} className={Styles.contacts__social}/></a>
+                    <a><img src={Telegram} className={Styles.contacts__social}/></a>
+                </div>
                 <div className={Styles.contacts__phone}>
                     <p className={Styles.contacts__phone_number}>+7 (913) 775-47-95</p>
                     <span className={Styles.contacts__phone_text}>получить консультацию</span>
                 </div>
             </div>
-            <NavLink to='/schreimaneng_ineering/basket' className={Styles.basket} >КОРЗИНА</NavLink>
+            <nav className={Styles.header__navigaiton}>
+                <NavLink to='/schreimaneng_ineering' className={Styles.logo}>
+                    <img src={Logo} className={Styles.logo__image} />
+                    <div className={Styles.logo__titleBlock}>
+                        <p className={Styles.logo__text} >ШРЕЙМАН</p>
+                        <p className={`${Styles.logo__text} ${Styles.logo__text_type_last}`} >Автоматизация</p>
+                    </div>
+                </NavLink>
+                { width > breakpoint && <Navigaiton show={width > breakpoint} /> }
+            </nav>
         </header>
     )
 }

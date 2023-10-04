@@ -5,8 +5,6 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { rootReducer } from './services/reducers/rootReducer';
 
-import './fonts/Arvo/ArvoRegular/ArvoRegular.woff';
-import './fonts/Raleway/RalewayRegular/RalewayRegular.woff';
 import './index.css';
 
 import App from './components/app/App';

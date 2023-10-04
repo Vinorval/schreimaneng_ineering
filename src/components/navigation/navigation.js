@@ -1,5 +1,6 @@
 import Styles from './navigation.module.css';
 import { NavLink } from "react-router-dom";
+import Basket from '../../images/basket_icon-icons.com_67985 (1) 1.svg';
 
 const Navigaiton = ({ show }) => {
 
@@ -10,7 +11,10 @@ const Navigaiton = ({ show }) => {
             <NavLink to='/schreimaneng_ineering/services' className={show ? Styles.navigate__link : Styles.burgerNavigation__link}>УСЛУГИ</NavLink>
             <NavLink to='/schreimaneng_ineering/company' className={show ? Styles.navigate__link : Styles.burgerNavigation__link}>КОМПАНИЯ</NavLink>
             <NavLink to='/schreimaneng_ineering/news' className={show ? Styles.navigate__link : Styles.burgerNavigation__link} >НОВОСТИ</NavLink>
-            {!show && <NavLink to='/schreimaneng_ineering/basket' className={Styles.burgerNavigation__link} >КОРЗИНА</NavLink>}
+            <button className={Styles.navigate__button}>
+                <img src={Basket} />
+                <NavLink to='/schreimaneng_ineering/basket' className={show ? Styles.navigate__link : Styles.burgerNavigation__link} >КОРЗИНА</NavLink>
+            </button>
         </nav>
     )
 }

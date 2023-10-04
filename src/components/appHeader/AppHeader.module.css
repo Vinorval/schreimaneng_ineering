@@ -1,17 +1,21 @@
 .header {
-    width: 95vw;
-    margin: 65px auto 0;
+    width: 100vw;
+    margin: 20px auto 0;
     display: grid;
-    grid-template-columns: 26% 52% 22%;
-    justify-content: space-between;
     justify-items: center;
-    margin-top: 65px;
-    font-family: 'RalewayRegular';
+}
+
+.header__navigaiton {
+    width: 90%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
 }
 
 .logo {
     display: flex;
     text-decoration: none;
+    align-items: center;
 }
 
 .logo__image {
@@ -19,13 +23,20 @@
     height: 130px;
 }
 
+.logo__titleBlock {
+    padding-left: 16px;
+}
+
 .logo__text {
-    font-family: 'ArvoRegular';
     font-size: 32px;
     font-weight: normal;
     text-align: start;
-    padding-left: 16px;
     color: black;
+    margin: 0;
+}
+
+.logo__text_type_last {
+    font-size: 18px;
 }
 
 .navigate {
@@ -44,21 +55,34 @@
 
 .contacts {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    max-width: 320px;
+    width: 100%;
     justify-self: end;
+    padding-bottom: 16px;
+    padding-right: 100px;
+    border-bottom: 1px solid black;
+}
+
+.contacts__socials {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 5px;
 }
 
 .contacts__social {
-    width: 39px;
-    height: 39px;
+    width: 30px;
+    height: 30px;
+}
+
+.contacts__phone {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
 }
 
 .contacts__phone_number {
     margin: 0;
-    font-family: 'ArvoRegular';
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .contacts__phone_text {
