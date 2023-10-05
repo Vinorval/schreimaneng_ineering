@@ -1,38 +1,41 @@
 .form {
-    width: 500px;
+    width: 550px;
     height: 700px;
     border: 1px solid;
+    border-radius: 20px;
 }
 
 .form__title {
     font-weight: 500;
     font-size: 24px;
     line-height: 26px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .form__inputList {
-    margin-top: 60px;
+    margin-top: 50px;
     display: grid;
-    gap: 30px;
+    gap: 16px;
     padding: 0;
     justify-items: center;
 }
 
 .form__input {
-    width: 450px;
+    width: 400px;
     height: 60px;
     border: 1px solid;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 18px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .form__button {
-    background-color: #EBBA8C;
+    background-color: rgba(235, 186, 142, 0.55);;
     border: 1px solid;
-    width: 450px;
+    border-radius: 15px;
+    width: 400px;
     height: 80px;
     font-weight: 700;
     font-size: 20px;
@@ -41,10 +44,59 @@
 
 .form__subtext {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
-    margin-top: 60px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 16px;
 }
+
+.documentsBlock {
+    list-style-type: none;
+}
+
+.documentsBlock__title {
+    font-size: 16px;
+    padding-bottom: 4px;
+    margin: 0;
+    text-align: start;
+}
+
+.documentsBlock__block {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    display: grid;
+    gap: 8px;
+}
+
+.documentsBlock__button {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+.documentsBlock__list {
+    padding: 0;
+}
+
+.documentsBlock__document {
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 12px;
+    display: flex;
+    height: 30px;
+    width: 376px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
 
 @media screen and (max-width: 1440px) {
     .form {

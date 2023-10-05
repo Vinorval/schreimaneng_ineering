@@ -1,9 +1,10 @@
 .app {
+  max-width: 99.99%;
   text-align: center;
-  max-width: 90%;
   margin: auto;
   display: grid;
   justify-content: center;
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 480px) {

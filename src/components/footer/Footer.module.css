@@ -1,14 +1,20 @@
 .footer {
+    margin-top: 50px;
+    align-items: center;
+    background-color: rgba(245, 217, 191, 0.2);;
+}
+
+.footer__wrapper {
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 0.5fr;
     gap: 60px;
-    margin-top: 170px;
     align-items: center;
+    margin: auto;
 }
 
 .footer__text {
-    font-family: 'Raleway';
-    font-size: 18px;
+    font-size: 16px;
     text-align: start;
 }
 
@@ -18,8 +24,7 @@
 }
 
 .footer__contacts_text {
-    font-family: 'Radio Canada';
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .social {
@@ -28,7 +33,7 @@
 }
 
 .social__link {
-    width: 39px;
+    width: 40px;
 }
 
 @media screen and (max-width: 1440px) {

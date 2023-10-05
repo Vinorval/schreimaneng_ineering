@@ -1,24 +1,31 @@
 .promo {
-    margin-top: 100px;
-    display: grid;
-    gap: 30px;
-    width: 65%;
-    font-family: 'RalewayRegular';
+    margin-top: 20px;
     font-style: normal;
-    color: #565656;
+    background-color: rgba(245, 217, 191, 0.2);
+    min-height: 270px;
+    display: grid;
+    align-items: center;
+}
+
+.promo__textBlock {
+    display: grid;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
 }
 
 .promo__title {
-    font-size: 72px;
-    line-height: 74px;
+    font-size: 40px;
+    line-height: 42px;
     text-align: start;
     margin: 0;
+    max-width: 50%;
 }
 
 .promo__subtitle {
     font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 20px;
+    line-height: 22px;
     text-align: start;
 }
 
