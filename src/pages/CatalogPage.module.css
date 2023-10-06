@@ -1,0 +1,11 @@
+.location {
+    text-align: start;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.location__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}

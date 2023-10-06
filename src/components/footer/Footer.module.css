@@ -6,6 +6,7 @@
 
 .footer__wrapper {
     width: 90%;
+    min-height: 150px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 0.5fr;
     gap: 60px;

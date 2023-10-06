@@ -1,22 +1,31 @@
-.promotion {
-    margin-top: 100px;
-    font-family: 'RalewayRegular';
-    font-style: normal;
-    color: #565656;
-}
-
 .promotion__title {
     font-weight: 700;
-    font-size: 44px;
-    line-height: 46px;
+    font-size: 40px;
+    line-height: 42px;
     text-align: start;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.promotion__block {
+    width: 99.99vw;
+    margin: auto;
+    background-color: rgba(245, 217, 191, 0.2);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promotion__img {
+    width: 400px;
+    height: 400px;
 }
 
 .promotion__text {
     font-weight: 700;
-    font-size: 48px;
-    line-height: 50px;
-    margin: 100px auto;
+    font-size: 38px;
+    line-height: 40px;
     width: 60%;
 }
 
