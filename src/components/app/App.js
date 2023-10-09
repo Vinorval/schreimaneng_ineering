@@ -15,6 +15,7 @@ import {
   ItemPage, 
   BasketPage, 
   NotFoundPage, 
+  ContactsPage,
 } from '../../pages/index';
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/schreimaneng_ineering/company" element={ <CompanyPage /> } />
         <Route path="/schreimaneng_ineering/services" element={ <ServicesPage /> } />
         <Route path="/schreimaneng_ineering/news" element={ <NewsPage /> } />
+        <Route path="/schreimaneng_ineering/contacts" element={ <ContactsPage /> } />
         <Route path="/schreimaneng_ineering/basket" element={ <BasketPage /> } />
 
         <Route path="/schreimaneng_ineering/catalog" element={ <CatalogPage /> } />

@@ -17,11 +17,13 @@ const ButtonFeedback = () => {
             <button onClick={onClickButton} className={Styles.feedback__buttonForm}>
                 <img className={Styles.feedback__ikonButton} src={FormButton} />
             </button>
-            <div className={`${showForm ? Styles.feedback__blockForm : Styles.invisible}`} >
+            <div className={showForm ? Styles.overflow : Styles.invisible}>
+            <div className={Styles.feedback__blockForm} >
                 <button onClick={onClickClose} className={Styles.feedback__closeButton} >
                     <img src={Close} className={Styles.feedback__ikonButton}/>
                 </button>
                 <Form />
+            </div>
             </div>
         </div>
     )
