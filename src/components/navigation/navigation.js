@@ -13,8 +13,8 @@ const Navigaiton = ({ show }) => {
             <NavLink to='/schreimaneng_ineering/contacts' className={show ? Styles.navigate__link : Styles.burgerNavigation__link}>Контакты</NavLink>
             <NavLink to='/schreimaneng_ineering/services' className={show ? Styles.navigate__link : Styles.burgerNavigation__link}>Услуги</NavLink>
             <button className={Styles.navigate__button}>
-                <img src={Basket} />
-                <NavLink to='/schreimaneng_ineering/basket' className={show ? Styles.navigate__link : Styles.burgerNavigation__link} >КОРЗИНА</NavLink>
+                <img className={Styles.navigate__basket} src={Basket} />
+                <NavLink to='/schreimaneng_ineering/basket' className={show ? Styles.navigate__link : Styles.burgerNavigation__link} >Корзина</NavLink>
             </button>
         </nav>
     )

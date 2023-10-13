@@ -1,12 +1,18 @@
 .header {
     width: 100vw;
-    margin: 20px auto 0;
+    margin-top: 20px;
     display: grid;
     justify-items: center;
 }
 
+.header__line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
 .header__navigaiton {
-    width: 90%;
+    width: 85%;
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
@@ -39,29 +45,14 @@
     font-size: 18px;
 }
 
-.navigate {
-    width: 40%;
-    min-width: 625px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navigate__link {
-    font-size: 22px;
-    text-decoration: none;
-    color: black;
-}
-
 .contacts {
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 100%;
+    width: 85%;
+    margin: auto;
     justify-self: end;
     padding-bottom: 16px;
-    padding-right: 100px;
-    border-bottom: 1px solid black;
 }
 
 .contacts__socials {
@@ -78,6 +69,7 @@
 .contacts__phone {
     grid-template-columns: repeat(2, 1fr);
     display: grid;
+    min-width: 320px;
 }
 
 .contacts__phone_number {
@@ -93,43 +85,31 @@
     display: none;
 }
 
-.burgerMenu__navigation {
-    display: grid;
-    gap: 16px;
-    text-align: start;
-    width: 160px;
-}
-
 .burgerMenu_visible {
     display: flex;
     border: 1px solid;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: #fff;
     position: absolute;
-    left: 0;
-    top: 0;
-    padding: 20px 0 70px 20px;
+    right: 0;
+    top: 70px;
     align-items: flex-start;
+    border-radius: 15px 0 0 15px;
+    height: 258px;
+    width: 162px;
 }
 
 .burgerMenu__buttonClose {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: #fff;
+    border-radius: 15px;
     border: none;
-    padding-right: 20px;
 }
 
 .burgerMenu__ikonClose {
-    width: 24px;
-    background-color: white;
     border-radius: 50%;
 }
 
 .burgerMenu_invisible {
     display: none;
-}
-
-.burgerMenu__link {
-    text-decoration: none;
-    color: white;
 }
 
 .burgerMenu__button {
@@ -152,115 +132,58 @@
     grid-column: 3/4;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1200px) {
     .logo__image {
-        width: 70px;
-        height: 100px;
+        width: 50px;
+        height: 80px;
     }
     
     .logo__text {
         font-size: 24px;
     }
 
-    .navigate {
-        width: 40%;
-        min-width: 450px;
-    }
-
-    .navigate__link {
-        font-size: 16px;
-    }
-
-    .contacts {
-        max-width: 230px;
+    .logo__text_type_last {
+        font-size: 14px;
     }
 
     .contacts__social {
-        width: 29px;
-        height: 29px;
+        width: 24px;
+        height: 24px;
     }
 
     .contacts__phone_number {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .contacts__phone_text {
-        font-size: 12px;
-    }
-    
-    .basket {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
-@media screen and (max-width: 1024px) { 
-    .header {
-        margin-top: 20px;
+@media screen and (max-width: 992px) {
+    .header__navigaiton {
+        width: 94%;
     }
 
-    .logo__image {
-        width: 55px;
-        height: 85px;
+    .contacts {
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo__titleBlock {
+        padding-left: 6px;
     }
 
     .logo__text {
         font-size: 20px;
-        padding-left: 6px;
     }
 
-    .navigate {
-        min-width: 350px;
-    }
-    
-    .navigate__link {
+    .logo__text_type_last {
         font-size: 12px;
-    }
-
-    .contacts {
-        max-width: 160px;
-        min-width: 155px;
-    }
-
-    .contacts__social {
-        width: 20px;
-        height: 20px;
-    }
-
-    .contacts__phone_number {
-        font-size: 12px;
-    }
-
-    .contacts__phone_text {
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 840px) {
-    .header {
-        grid-template-columns: 10% 52% 35%;
     }
 
     .burgerMenu {
         display: flex;
-    }
-
-    .navigate {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .header {
-        display: grid;
-        grid-template-columns: 40px 1fr;
-        gap: 12px;
-    }
-
-    .contacts {
-        display: none;
-    }
-
-    .basket {
-        display: none;
     }
 }
