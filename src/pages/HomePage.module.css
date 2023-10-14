@@ -1,10 +1,12 @@
 .home {
+    width: 99.9%;
     margin: auto;
+    display: grid;
+    gap: 50px;
 }
 
 .home__company {
-    margin-top: 50px;
-    width: 90%;
+    width: 85%;
     margin: auto;
 }
 
@@ -15,60 +17,24 @@
     max-width: 700px;
 }
 
-.buttonForm {
-    border: none;
-    border-radius: 50%;
-    padding: 0;
-    margin: 0;
-    width: 64px;
-    height: 64px;
-    position: fixed;
-    bottom: 5%;
-    right: 2%;
-    color: white;
-    background-color: #009845;
-}
-
-.invisible {
-    display: none;
-}
-
-.blockForm {
-    background-color: white;
-    height: 100vh;
-    width: 45%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: grid;
-    gap: 30px;
-    align-content: center;
-    justify-items: center;
-}
-
-.closeButton {
-    padding: 0;
-    margin: 50px;
-    width: 64px;
-    height: 64px;
-    justify-self: end;
-    background-color: white;
-    border: none;
-    transform: rotate(45deg);
-}
-
-.closeButton__img {
-    width: 45px;
-}
-
-@media screen and (max-width: 1440px) {
-    .home__company {
-        margin-top: 100px;
+@media screen and (max-width: 1200px) {
+    .home__text {
+        font-size: 16px;
     }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 992px) {
     .home__company {
-        gap: 40px;
+        width: 94%;
+    }
+
+    .home__text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        gap: 20px;
     }
 }

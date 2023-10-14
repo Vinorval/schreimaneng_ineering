@@ -31,11 +31,6 @@
     margin: 20px 30px 0 0;
 }
 
-.burgerNavigation__link {
-    text-decoration: none;
-    color: #000;
-}
-
 @media screen and (max-width: 1200px) {
     .navigate {
         min-width: 520px;

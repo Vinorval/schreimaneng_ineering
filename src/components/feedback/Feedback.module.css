@@ -1,13 +1,12 @@
 .feedback {
-    width: 90%;
+    width: 85%;
     margin: auto;
-    margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
 
 .feedback__textBlock {
-    width: 50%;
+    width: 40%;
 }
 
 .feedback__title {
@@ -25,37 +24,43 @@
     text-align: start;
 }
 
-@media screen and (max-width: 1440px) {
-    .feedback__title {
-        font-size: 32px;
-        line-height: 34px;
-    }
-
-    .feedback__text {
-        font-size: 18px;
-        line-height: 20px;
-    }
-}
-
-@media screen and (max-width:1024px) {
-    .feedback {
-        display: grid;
-        gap: 30px;
-    }
-
-    .feedback__textBlock {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1200px) {
     .feedback__title {
         font-size: 24px;
         line-height: 26px;
     }
 
     .feedback__text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .feedback {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback__title {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .feedback__text {
         font-size: 14px;
         line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .feedback {
+        display: grid;
+        gap: 20px;
+    }
+
+    .feedback__textBlock {
+        width: 100%;
     }
 }

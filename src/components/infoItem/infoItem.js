@@ -2,6 +2,7 @@ import Styles from './infoItem.module.css';
 
 const InfoItem = ({ title, text, textArr, imgArr }) => {
 
+    //перебор и отрисовка текстов из массива
     const returnTextArr = () => {
         return textArr.map((item) => {
             return (
@@ -14,6 +15,7 @@ const InfoItem = ({ title, text, textArr, imgArr }) => {
         })
     }
 
+    //перебор и отрисовка изображений из массива
     const returnImgArr = () => {
         return imgArr.map((item) => {
             return (

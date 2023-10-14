@@ -1,15 +1,13 @@
 .footer {
-    margin-top: 50px;
     align-items: center;
     background-color: rgba(245, 217, 191, 0.2);;
 }
 
 .footer__wrapper {
-    width: 90%;
+    width: 85%;
     min-height: 150px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 0.5fr;
-    gap: 60px;
+    grid-template-columns: 1fr 2fr 1fr 0.3fr;
     align-items: center;
     margin: auto;
 }
@@ -17,6 +15,7 @@
 .footer__text {
     font-size: 16px;
     text-align: start;
+    max-width: 260px;
 }
 
 .footer__contacts {
@@ -25,7 +24,8 @@
 }
 
 .footer__contacts_text {
-    font-size: 20px;
+    font-size: 18px;
+    text-align: end;
 }
 
 .social {
@@ -34,72 +34,64 @@
 }
 
 .social__link {
-    width: 40px;
+    width: 28px;
 }
 
-@media screen and (max-width: 1440px) {
-    .footer {
-        gap: 30px;
-    }
-
-    .footer__text{
-        font-size: 14px;
+@media screen and (max-width: 1200px) {
+    .footer__wrapper {
+        width: 94%;
     }
 
     .footer__contacts_text {
-        font-size: 18px;
+        font-size: 16px;
     }
 
-    .social__link {
-        width: 29px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .footer {
-        gap: 15px;
-    }
-
-    .footer__contacts_text {
+    .footer__text {
         font-size: 14px;
     }
 
-    .footer__text {
-        font-size: 12px;
-    }
-
     .social__link {
-        width: 20px;
+        width: 28px;
     }
 }
 
-@media screen and (max-width: 840px) {
-    .footer {
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
+@media screen and (max-width: 992px) {
+    .footer__wrapper {
+        grid-template-columns: 1fr 70px;
+        align-content: center;
+        min-height: 210px;
     }
 
     .footer__contacts {
-        display: block;
-    }
-
-    .footer__text {
-        font-size: 10px;
-        text-align: center;
-    }
-
-    .footer__contacts {
+        flex-direction: column;
+        align-items: flex-start;
         grid-column: 1/2;
         grid-row: 1/2;
     }
 
     .social {
         grid-row: 1/2;
-        width: 100px;
-        margin: auto;
+        grid-column: 2/3;
+        gap: 10px;
+        justify-content: end;
     }
 
-    .social__link {
-        width: 29px;
+    .footer__text {
+        max-width: none;
+    }
+
+    .footer__contacts_text {
+        text-align: start;
+        margin: 10px 0;
+    }
+
+    .footer__text_place_before {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .footer__text_place_last {
+        grid-row: 3/4;
+        grid-column: 1/2;
     }
 }

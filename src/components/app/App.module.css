@@ -3,6 +3,7 @@
   text-align: center;
   margin: auto;
   display: grid;
+  gap: 50px;
   justify-content: center;
   font-family: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
 }
