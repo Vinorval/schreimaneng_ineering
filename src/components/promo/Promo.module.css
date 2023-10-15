@@ -1,10 +1,26 @@
 .promo {
-    width: 99%;
     font-style: normal;
-    background-color: rgba(245, 217, 191, 0.2);
     min-height: 270px;
     display: grid;
     align-items: center;
+}
+
+.promo_background_color {
+    background-color: rgba(245, 217, 191, 0.2);
+}
+
+.promo_width_wide {
+    width: 99.9vw;
+}
+
+.promo_background_img {
+    background-image: url('../../images/promo.jpg');
+    background-size: cover;
+}
+
+.promo_width_midlle {
+    width: 85%;
+    margin: auto;
 }
 
 .promo__textBlock {
@@ -15,9 +31,15 @@
 }
 
 .promo__title {
+    font-weight: 700;
     font-size: 40px;
     line-height: 42px;
     text-align: start;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.promo__title_place_home {
     margin: 0;
     max-width: 65%;
 }
@@ -29,13 +51,58 @@
     text-align: start;
 }
 
+.promo__block {
+    width: 85%;
+    margin: auto;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.promo__text {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 40px;
+    width: 60%;
+}
+
+.promo__img {
+    width: 300px;
+    height: 300px;
+    border: 1px black solid;
+    border-radius: 15px;
+}
+
 @media screen and (max-width: 992px) {
     .promo {
         min-height: 250px;
     }
 
+    .promo_width_midlle {
+        width: 94%;
+    }
+
     .promo__textBlock {
         width: 94%;
+    }
+
+    .promo__title {
+        width: 94%;
+    }
+
+    .promo__block {
+        min-height: 300px;
+    }
+
+    .promo__img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .promo__text {
+        font-size: 28px;
+        line-height: 30px;
     }
 }
 
@@ -53,11 +120,28 @@
         font-size: 16px;
         line-height: 18px;
     }
+
+    .promo__text {
+        font-size: 20px;
+        line-height: 22px;
+    }
 }
 
 @media screen and (max-width: 576px) {
-    .promo__title {
+    .promo__title_place_home {
         width: 98%;
+    }
+
+    .promo__block {
+        min-height: 150px;
+    }
+
+    .promo__img {
+        display: none;
+    }
+
+    .promo__text {
+        width: 80%;
     }
 }
 

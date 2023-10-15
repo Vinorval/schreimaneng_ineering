@@ -3,10 +3,10 @@ import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
 const ItemPage = () => {
     return (
-        <>
+        <section>
             <Product />
             <ButtonFeedback />
-        </>
+        </section>
     )
 }
 

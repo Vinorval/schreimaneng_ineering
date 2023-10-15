@@ -1,21 +1,19 @@
-import { NavLink, useLocation } from "react-router-dom";
 import Promotion from "../components/promotion/Promotion";
+import Promo from "../components/promo/Promo";
 import InfoItem from "../components/infoItem/infoItem";
+import Location from "../components/location/Location";
 import Styles from './ServicesPage.module.css';
 import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
 import { servicesList } from "../utils/utils";
 
 const ServicesPage = () => {
-    const location = useLocation();
+    const location = [ { link: "/schreimaneng_ineering", text: 'Главная /' }, { link: "/schreimaneng_ineering/services", text: ' Услуги' } ];
 
     return (
-        <section className={Styles.services} >
-            <nav className={Styles.services__location}>
-                <NavLink className={Styles.services__link} to="/schreimaneng_ineering" >Главная /</NavLink>
-                <NavLink className={Styles.services__link} to="/schreimaneng_ineering/services" > Услуги</NavLink>
-            </nav>
-            <Promotion title="УСЛУГИ" text="Объединяем опыт и творчество для создания уникальных решений" />
+        <section className={Styles.page} >
+            <Location path={location} />
+            <Promo title="Услуги" />
             <InfoItem textArr={servicesList} />
             <ButtonFeedback />
         </section>

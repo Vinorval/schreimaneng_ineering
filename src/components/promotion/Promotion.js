@@ -1,5 +1,5 @@
 import Styles from './Promotion.module.css';
-import Foto from '../../images/foto-man.jpg';
+import Foto from '../../images/foto-man.png';
 
 const Promotion = ({title, text}) => {
     return (

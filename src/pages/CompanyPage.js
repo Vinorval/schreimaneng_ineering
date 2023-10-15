@@ -1,10 +1,13 @@
 import Styles from './CompanyPage.module.css';
-import Promotion from "../components/promotion/Promotion";
+import Location from '../components/location/Location';
+import Promo from '../components/promo/Promo';
 import InfoItem from '../components/infoItem/infoItem';
 import { companyInfo } from '../utils/utils';
 import ButtonFeedback from "../components/buttonFeedback/buttonFeedback";
 
+
 const CompanyPage = () => {
+    const location = [ { link: "/schreimaneng_ineering", text: 'Главная /' }, { link: "/schreimaneng_ineering/company", text: ' Компания' } ];
 
     const returnInfo = () => {
         return companyInfo.map( (item) => {
@@ -15,7 +18,8 @@ const CompanyPage = () => {
     }
     return (
         <section className={Styles.company}>
-            <Promotion title="КОМПАНИЯ" text="Объединяем опыт и творчество для создания уникальных решений" />
+            <Location path={location} />
+            <Promo title="Компания" />
             <ul className={Styles.company__list}>
                 {returnInfo()}
             </ul>

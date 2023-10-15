@@ -1,21 +1,4 @@
-.services {
-    margin: 20px auto 0;
-}
-
-.services__list {
-    display: grid;
-    gap: 70px;
-    padding: 0;
-}
-
-.services__location {
-    text-align: start;
-    width: 90%;
+.page {
+    width: 99%;
     margin: auto;
-}
-
-.services__link {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
 }

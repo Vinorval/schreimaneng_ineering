@@ -1,0 +1,23 @@
+.location {
+    text-align: start;
+    width: 85%;
+    margin: auto;
+}
+
+.location__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+    .location__link {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .location {
+        width: 94%;
+    }
+}
