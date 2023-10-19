@@ -1,0 +1,37 @@
+.newsList {
+    width: 85%;
+    margin: 50px auto 0;
+    display: grid;
+    gap: 40px;
+    padding: 0;
+}
+
+.news {
+    width: 100%;
+    height: 250px;
+    border: 1px black solid;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 20% 77%;
+    grid-template-rows: 250px;
+    gap: 1%;
+}
+
+.news__image {
+    width: 100%;
+    height: 98%;
+    margin: auto;
+    object-fit: contain;
+}
+
+.news__textBlock {
+    text-align: start;
+}
+
+.news__title {
+    font-size: 24px;
+}
+
+.news__text {
+    font-size: 18px;
+}

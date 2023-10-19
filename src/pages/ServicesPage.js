@@ -1,4 +1,3 @@
-import Promotion from "../components/promotion/Promotion";
 import Promo from "../components/promo/Promo";
 import InfoItem from "../components/infoItem/infoItem";
 import Location from "../components/location/Location";

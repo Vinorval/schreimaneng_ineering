@@ -1,0 +1,91 @@
+.address {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 446px;
+}
+
+.address__phone {
+    width: 40%;
+    display: grid;
+    gap: 24px;
+    justify-content: center;
+    margin-top: -180px;
+}
+
+.address__text {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.phone {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding-right: 6px;
+    display: grid;
+    align-content: end;
+    justify-content: end;
+    gap: 6px;
+}
+
+.phone__text {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+    .address__text {
+        font-size: 20px;
+    }
+
+    .phone__text {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .address {
+        width: 94%;
+    }
+
+    .address__map {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .address {
+        display: grid;
+        justify-content: start;
+        align-content: space-evenly;
+        min-height: 520px;
+    }
+
+    .address__phone {
+        gap: 10px;
+        width: 100%;
+        justify-content: start;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .address {
+        min-height: 380px;
+    }
+
+    .address__text {
+        font-size: 18px;
+    }
+
+    .phone__text {
+        font-size: 14px;
+    }
+
+    .address__map {
+        width: 300px;
+        height: 250px;
+    }
+}
