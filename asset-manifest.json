@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/schreimaneng_ineering/static/css/main.a1476e29.css",
+    "main.css": "/schreimaneng_ineering/static/css/main.e677a94b.css",
     "main.js": "/schreimaneng_ineering/static/js/main.c7aa1807.js",
     "static/js/787.f60c5ca6.chunk.js": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js",
     "static/media/foto-man.png": "/schreimaneng_ineering/static/media/foto-man.9bbf0c62065d115c954a.png",
@@ -22,12 +22,12 @@
     "static/media/Plus_icon.svg": "/schreimaneng_ineering/static/media/Plus_icon.3f71e7de4eca8b4a4d69cd24c4a9bb6c.svg",
     "static/media/4105962-add-expand-plus_113920.svg": "/schreimaneng_ineering/static/media/4105962-add-expand-plus_113920.2e386d62e2d84f3ccc11ef0b718c01fa.svg",
     "static/media/4105964-collapse-minus-reduce-remove_113927.svg": "/schreimaneng_ineering/static/media/4105964-collapse-minus-reduce-remove_113927.879df8cc2610f505f8bc42db52145f2c.svg",
-    "main.a1476e29.css.map": "/schreimaneng_ineering/static/css/main.a1476e29.css.map",
+    "main.e677a94b.css.map": "/schreimaneng_ineering/static/css/main.e677a94b.css.map",
     "main.c7aa1807.js.map": "/schreimaneng_ineering/static/js/main.c7aa1807.js.map",
     "787.f60c5ca6.chunk.js.map": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1476e29.css",
+    "static/css/main.e677a94b.css",
     "static/js/main.c7aa1807.js"
   ]
 }
