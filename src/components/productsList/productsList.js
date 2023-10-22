@@ -22,7 +22,7 @@ const ProductsList = () => {
     const getProductsArr = () => {
         switch (location.pathname) {
             case '/schreimaneng_ineering/catalog/controlPanel': {
-                console.log(location.pathname.length)
+                console.log(location.pathname.length);
                 return products.controlPanel
             }
             default: {
