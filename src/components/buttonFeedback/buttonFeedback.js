@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Styles from './buttonFeedback.module.css';
 
 import FormButton from '../../images/icons8-форма-50.png';
-import Close from '../../images/4105962-add-expand-plus_113920.svg';
-
+import Popup from "../popup/popup";
 import Form from '../form/form';
 
 const ButtonFeedback = () => {
@@ -17,14 +16,9 @@ const ButtonFeedback = () => {
             <button onClick={onClickButton} className={Styles.feedback__buttonForm}>
                 <img className={Styles.feedback__ikonButton} src={FormButton} />
             </button>
-            <div className={showForm ? Styles.overflow : Styles.invisible}>
-            <div className={Styles.feedback__blockForm} >
-                <button onClick={onClickClose} className={Styles.feedback__closeButton} >
-                    <img src={Close} className={Styles.feedback__ikonButton}/>
-                </button>
+            <Popup show={showForm} closePopup={onClickClose} >
                 <Form />
-            </div>
-            </div>
+            </Popup>
         </div>
     )
 }

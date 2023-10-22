@@ -16,7 +16,7 @@ const Address = () => {
                 height="346" 
                 frameBorder="0"
                 className={Styles.address__map}
-            ></iframe>
+            />
         </section>
     )
 };

@@ -211,6 +211,7 @@
 
     .documentsBlock__button {
         width: 130px;
+        padding: 0;
     }
 }
 
