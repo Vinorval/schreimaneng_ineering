@@ -8,22 +8,9 @@ import optoins from "../../utils/options";
 import Option from "../option/option";
 import OrderPopup from "../orderPopup/OrderPopup";
 
-const Product = () => {
+const Product = ({ product }) => {
     const dispatch = useDispatch();
     const [show, setShow] = React.useState(false);
-
-    const { products } = useSelector( store => ({ products: store.products.products }) );
-    const location = useLocation();
-    //console.log(location.pathname.slice(0, 43))
-
-    const findProduct = () => {
-        switch (location.pathname.slice(0, 43)) {
-            case '/schreimaneng_ineering/catalog/controlPanel': {
-                //console.log(products.controlPanel)
-                return products.controlPanel.find(item => item._id == location.pathname.slice(-4))
-            }
-        }
-    }
 
     const showPopup = () => {
         setShow(true);
@@ -34,7 +21,6 @@ const Product = () => {
         setShow(false)
     }
 
-    const product = findProduct()
     //React.useEffect(() => {
     //    dispatch(addProductSuccess(product));
     //}, [dispatch]);
