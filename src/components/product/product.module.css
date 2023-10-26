@@ -1,15 +1,13 @@
 .product {
     width: 85%;
     margin: auto;
+    display: grid;
+    gap: 40px;
 }
 
 .product__title {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 75px;
-    color: #565656;
+    font-size: 40px;
     text-align: start;
 }
 
@@ -20,13 +18,66 @@
     column-gap: 5%;
 }
 
+.description__imagesBlock {
+    max-width: 400px;
+    display: grid;
+    gap: 16px;
+    position: relative;
+}
+
 .description__image {
-    grid-row: 1/4;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.description__imagesList {
+    width: 100%;
+    padding: 0;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.description__imageItem {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.description__imageItem_checked {
+    border: 3px rgba(245, 217, 191, 1) solid;
+}
+
+.description__switchImages {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 125px;
+    right: 0;
+}
+
+.description__switchButton {
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+}
+
+.description__switchButton_route_right {
+    transform: rotate(180deg);
 }
 
 .description__text {
     font-size: 14px;
     text-align: start;
+    white-space: pre-line;
 }
 
 .description__order {
@@ -101,4 +152,38 @@
 
 .option__shop {
     width: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+    .product {
+        gap: 20px;
+    }
+
+    .product__title {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .product {
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product__title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .product__title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .product {
+        gap: 10px;
+    }
 }

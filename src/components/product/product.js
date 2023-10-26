@@ -2,24 +2,23 @@ import React, { useState } from "react";
 import Styles from './product.module.css';
 import Item from '../../images/товар.jpg';
 import { useDispatch, useSelector, RootStateOrAny } from 'react-redux';
-import { NavLink, useLocation } from "react-router-dom";
-import { addProductSuccess, addOptionSuccess } from '../../services/actions/actions';
 import optoins from "../../utils/options";
 import Option from "../option/option";
 import OrderPopup from "../orderPopup/OrderPopup";
+import { PhotosArr } from "../../utils/utils";
+import NextButton from '../../images/next.svg';
 
 const Product = ({ product }) => {
     const dispatch = useDispatch();
     const [show, setShow] = React.useState(false);
+    const [selectImg, setSelectImg] = React.useState(0);
+    console.log(product.description.replace(/;/g, "\n"));
 
-    const showPopup = () => {
-        setShow(true);
-    }
+    const showPopup = () => setShow(true);
+    const closePopup = () => setShow(false);
 
-    const closePopup = () => {
-        
-        setShow(false)
-    }
+    const nextPhoto = () => (selectImg < (PhotosArr.length - 1)) && setSelectImg(selectImg + 1);
+    const prevPhoto = () => (selectImg > 0) && setSelectImg(selectImg - 1);
 
     //React.useEffect(() => {
     //    dispatch(addProductSuccess(product));
@@ -36,14 +35,35 @@ const Product = ({ product }) => {
         })
     }
 
+    const returnPhotoProduct = () => {
+        return (
+            <div className={Styles.description__imagesBlock}>
+                <img src={PhotosArr[selectImg]} className={Styles.description__image} />
+                <ul className={Styles.description__imagesList}>
+                    {PhotosArr.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <img src={item} className={`${Styles.description__imageItem} ${(selectImg == index) && Styles.description__imageItem_checked}`} onClick={() => setSelectImg(index)} />
+                            </li>
+                        )
+                    })}
+                </ul>
+                <div className={Styles.description__switchImages}>
+                    <button className={`${Styles.description__switchButton} ${Styles.description__switchButton_route_right}`} onClick={prevPhoto} ><img src={NextButton} /></button>
+                    <button className={Styles.description__switchButton} ><img src={NextButton} onClick={nextPhoto} /></button>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <section className={Styles.product} >
             <h2 className={Styles.product__title}>Щит управления {product.name}</h2>
             <div className={Styles.description} >
-                <img className={Styles.description__image} src={Item} />
+                {returnPhotoProduct()}
                 <div className={Styles.description__textBlock} >
-                    <p className={Styles.description__text} >{product._id}</p>
-                    <p className={Styles.description__text} >{product.description}</p>
+                    <p className={Styles.description__text} >Арт. {product._id}</p>
+                    <p className={Styles.description__text} >{product.description.replace(/;/g, "\n")}</p>
                 </div>
                 <div className={Styles.description__order} >
                     <p className={Styles.description__price} >56 888 р.</p>

@@ -1,6 +1,5 @@
-import Place from '../images/place.jpg';
-import Certificate_1 from '../images/certificate_1.png';
-import Certificate_2 from '../images/certificate_2.png';
+import Item from '../images/товар.jpg';
+import Item2 from '../images/foto-man.png';
 
 export const servicesList = [
     {
@@ -63,36 +62,4 @@ export const advantagesList = [
     },
 ]
 
-export const companyInfo = [
-    {
-        title: 'Контакты',
-        text: `Офис г. Новосибирск ${<br />} АДРЕС ХЗ КАКОЙ ПОКА + НОМЕРА ТЕЛЕФОНОВ`,
-        images: [
-            {
-                src: Place,
-                id: '001',
-            }
-        ],
-        id: '001'
-    },
-    {
-        title: 'Сертификаты',
-        text: '_',
-        images: [
-            {
-                src: Certificate_1,
-                id: '001',
-            },
-            {
-                src: Certificate_2,
-                id: '002',
-            }
-        ],
-        id: '002'
-    },
-    {
-        title: 'Оплата и доставка',
-        text: 'Мы осуществляем доставку 3 способами: 1. Транспортными компаниями 2. Курьером 3. Лично в руки по г. Новосибирск Стоимость доставки оценивается транспортной компанией или курьером. Стоимость доставки лично в руки 500р.',
-        id: '003'
-    },
-]
+export const PhotosArr = [ Item, Item2, Item, Item2, Item, Item, Item, ]
