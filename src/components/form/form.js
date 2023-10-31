@@ -1,8 +1,14 @@
 import Styles from './form.module.css';
 import Plus from '../../images/Plus_icon.svg';
 import Document from '../../images/document_paper_work_text_file_icon_191646 1.png';
+import { FilePond, registerPlugin } from 'react-filepond';
+import 'filepond/dist/filepond.min.css';
+import { useState } from 'react';
 
 const Form = () => {
+    const [files, setFiles] = useState([]);
+    console.log(files);
+
     return (
         <form className={Styles.form}>
             <h3 className={Styles.form__title}>Оставьте заявку ниже</h3>
@@ -14,13 +20,22 @@ const Form = () => {
                     <p className={Styles.documentsBlock__title}>Оставьте заявку ниже</p>
                     <div className={Styles.documentsBlock__block}>
                         <button className={Styles.documentsBlock__button}>
-                            <img src={Plus} />
-                            <p className={Styles.documentsBlock__name}>Добавить файл</p>
+                            {/*<img src={Plus} />
+                            <p className={Styles.documentsBlock__name}>Добавить файл</p>*/}
+                            <FilePond
+                                files={files}
+                                onupdatefiles={setFiles}
+                                allowMultiple={true}
+                                maxFiles={3}
+                                name="files" /* sets the file input name, it's filepond by default */
+                                labelIdle='Добавить файл'
+                            />
                         </button>
                         <ul className={Styles.documentsBlock__list}>
                             <li className={Styles.documentsBlock__document}>
-                                <img src={Document} />
-                                <p className={Styles.documentsBlock__name}>Название файла</p>
+                                {/*<img src={Document} />
+                                <p className={Styles.documentsBlock__name}>Название файла</p>*/}
+                                {files}
                             </li>
                         </ul>
                     </div>

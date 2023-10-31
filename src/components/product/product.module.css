@@ -154,6 +154,12 @@
     width: 20%;
 }
 
+.popupImg {
+    width: 1200px;
+    height: 800px;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 1200px) {
     .product {
         gap: 20px;

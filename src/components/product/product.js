@@ -7,15 +7,21 @@ import Option from "../option/option";
 import OrderPopup from "../orderPopup/OrderPopup";
 import { PhotosArr } from "../../utils/utils";
 import NextButton from '../../images/next.svg';
+import Popup from "../popup/popup";
 
 const Product = ({ product }) => {
     const dispatch = useDispatch();
     const [show, setShow] = React.useState(false);
+    const [ showImg, setShowImg] = useState(false);
     const [selectImg, setSelectImg] = React.useState(0);
     console.log(product.description.replace(/;/g, "\n"));
 
     const showPopup = () => setShow(true);
-    const closePopup = () => setShow(false);
+    const showPopupImg = () => setShowImg(true);
+    const closePopup = () => {
+        setShow(false);
+        setShowImg(false);
+    };
 
     const nextPhoto = () => (selectImg < (PhotosArr.length - 1)) && setSelectImg(selectImg + 1);
     const prevPhoto = () => (selectImg > 0) && setSelectImg(selectImg - 1);
@@ -38,7 +44,7 @@ const Product = ({ product }) => {
     const returnPhotoProduct = () => {
         return (
             <div className={Styles.description__imagesBlock}>
-                <img src={PhotosArr[selectImg]} className={Styles.description__image} />
+                <img src={PhotosArr[selectImg]} className={Styles.description__image} onClick={showPopupImg} />
                 <ul className={Styles.description__imagesList}>
                     {PhotosArr.map((item, index) => {
                         return (
@@ -175,6 +181,9 @@ const Product = ({ product }) => {
                 </ul>
             </div>
             <OrderPopup show={show} closePopup={closePopup} />
+            <Popup show={showImg} closePopup={closePopup}>
+                <img className={Styles.popupImg} src={PhotosArr[selectImg]} />
+            </Popup>
         </section>
     )
 }
