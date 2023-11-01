@@ -67,13 +67,15 @@ const Product = ({ product }) => {
             <h2 className={Styles.product__title}>Щит управления {product.name}</h2>
             <div className={Styles.description} >
                 {returnPhotoProduct()}
-                <div className={Styles.description__textBlock} >
-                    <p className={Styles.description__text} >Арт. {product._id}</p>
-                    <p className={Styles.description__text} >{product.description.replace(/;/g, "\n")}</p>
-                </div>
-                <div className={Styles.description__order} >
-                    <p className={Styles.description__price} >56 888 р.</p>
-                    <button type='button' className={Styles.description__button} onClick={showPopup} >Добавить</button>
+                <div className={Styles.description__info}>
+                    <div className={Styles.description__textBlock} >
+                        <p className={Styles.description__text} >Арт. {product._id}</p>
+                        <p className={Styles.description__text} >{product.description.replace(/;/g, "\n")}</p>
+                    </div>
+                    <div className={Styles.description__order} >
+                        <p className={Styles.description__price} >56 888 р.</p>
+                        <button type='button' className={Styles.description__button} onClick={showPopup} >Добавить</button>
+                    </div>
                 </div>
             </div>
             <ul className={Styles.detail} >

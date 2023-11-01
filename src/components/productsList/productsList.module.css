@@ -1,30 +1,29 @@
 .catalog {
     display: grid;
-    grid-template-columns: 20% 75%;
-    gap: 5%;
+    grid-template-columns: 325px 75%;
+    gap: 50px;
+    width: 85%;
+    margin: auto;
 }
 
 .catalog__title {
-    font-family: 'Raleway';
-    font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 75px;
-    color: #565656;
+    font-size: 40px;
+    line-height: 42px;
     text-align: start;
-    grid-column: 1/4;
+    grid-column: 1/3;
+    margin: 0;
 }
 
 .version {
-    border: 1px solid #565656;
-    max-height: 500px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    height: 280px;
 }
 
 .version__title {
-    font-family: 'Raleway';
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
-    line-height: 20px;
     text-align: center;
 }
 
@@ -32,13 +31,16 @@
     list-style-type: none;
     padding: 0;
     display: grid;
-    gap: 6px;
+    gap: 16px;
 }
 
 .list {
     padding: 0;
     display: grid;
-    gap: 16px;
+    grid-template-columns: repeat(4, 270px);
+    gap: 20px;
+    margin: 0;
+    justify-content: center;
 }
 
 .item {
@@ -46,18 +48,35 @@
     color: black;
     text-decoration: none;
     text-align: start;
-    border: 1px solid;
+    border: 1px solid #000;
+    border-radius: 20px;
     justify-content: space-between;
+    flex-direction: column;
+    min-height: 400px;
 }
 
 .item__image {
-    width: 300px;
-    height: 100%;
-    border-radius: 2%;
+    width: 268px;
+    height: 160px;
+    border-radius: 20px 20px 0 0;
 }
 
 .item__description {
-    width: 50%;
+    width: 95%;
+    margin: auto;
+}
+
+.item__name {
+    font-size: 20px;
+}
+
+.item__text {
+    display: none;
+}
+
+.item__text_type_last {
+    display: inline;
+    font-size: 16px;
 }
 
 .oreder {
@@ -65,19 +84,35 @@
 }
 
 .item__oder {
-    width: 12%;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    gap: 20px;
 }
 
 .item__price {
-    color: #009845;
     font-size: 24px;
+    margin: 0;
 }
 
 .item__button {
-    width: 100px;
-    height: 54px;
-    font-size: 20px;
-    background-color: #009845;
+    width: 130px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: rgba(235, 186, 142, 0.6);
     border: none;
-    color: white;
+    justify-self: center;
+    margin-bottom: 16px;
+}
+
+.buttonMore {
+    width: 300px;
+    height: 64px;
+    font-size: 24px;
+    border-radius: 20px;
+    background-color: rgba(235, 186, 142, 0.6);
+    border: none;
+    grid-column: 2/3;
+    margin: auto;
 }

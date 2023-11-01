@@ -10,19 +10,11 @@ import Item from '../../images/товар.jpg';
 const ProductsList = () => {
     const location = useLocation();
     const dispatch = useDispatch();
+    const [startCard, setSartCard] = React.useState(0);
     const { products } = useSelector( store => ({ products: store.products.products }) );
-
-    //React.useEffect(() => {
-    //    dispatch(getProductSuccess())
-    //}, [])
-
-    //const { product } = useSelector( store => ({ product: store.products.product }) );
-    //const { product } = useSelector( store => ({ product: store.products.product }) );
-
     const getProductsArr = () => {
         switch (location.pathname) {
             case '/schreimaneng_ineering/catalog/controlPanel': {
-                console.log(location.pathname.length);
                 return products.controlPanel
             }
             default: {
@@ -30,20 +22,45 @@ const ProductsList = () => {
             }
         }
     };
+    const ProductCards = getProductsArr().slice(0,startCard);
+    console.log(ProductCards);
 
-    //const postOrder = () => {
-    //    dispatch(postOrderSuccess(product))
-    //}
+    function showsnumberList() {
+        if( window.innerWidth < 768 ) {
+          return setSartCard(5)
+        } if (window.innerWidth >= 768) {
+          return setSartCard(8) }
+    };
+  
+    React.useEffect(() => {
+        showsnumberList()
+    }, []);
+
+    function handleMore() {
+        if( window.innerWidth < 768 ) {
+          return setSartCard(startCard + 1)
+        } if (window.innerWidth >= 768) {
+          return setSartCard(startCard + 8)
+        }
+    }
+
+    function hideButton() {
+        if (getProductsArr.length === startCard.length) {
+          return true
+        } else {
+          return false
+        }
+    }
 
     const returnProduct = () => {
-        return getProductsArr().map((item) => {
+        return ProductCards.map((item) => {
                 return (
                     <NavLink key={item._id} to={`/schreimaneng_ineering/catalog/controlPanel/${item._id}`} className={Styles.item}>
                         <img className={Styles.item__image} src={Item} />
                         <div className={Styles.item__description} >
                             <h3 className={Styles.item__name} >Щит управления {item.name}</h3>
                             <p className={Styles.item__text} >{item.description}</p>
-                            <p className={[Styles.item__text, Styles.item__text_type_last]} >{item._id}</p>
+                            <p className={[Styles.item__text, Styles.item__text_type_last]} >Арт. {item._id}</p>
                         </div>
                         <div className={Styles.item__oder} >
                             <p className={Styles.item__price} >₽ 56 260</p>
@@ -68,6 +85,7 @@ const ProductsList = () => {
             <ul className={Styles.list}>
                 {returnProduct()}
             </ul>
+            <button className={Styles.buttonMore} onClick={handleMore} >Показать ещё</button>
         </section>
     )
 }
