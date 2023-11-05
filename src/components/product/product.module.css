@@ -75,10 +75,14 @@
     background-color: transparent;
     width: 48px;
     height: 48px;
+    position: absolute;
+    top: 135px;
+    right: 0;
 }
 
 .description__switchButton_route_right {
     transform: rotate(180deg);
+    left: 0;
 }
 
 .description__text {

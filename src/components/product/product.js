@@ -54,10 +54,8 @@ const Product = ({ product }) => {
                         )
                     })}
                 </ul>
-                <div className={Styles.description__switchImages}>
-                    <button className={`${Styles.description__switchButton} ${Styles.description__switchButton_route_right}`} onClick={prevPhoto} ><img src={NextButton} /></button>
-                    <button className={Styles.description__switchButton} ><img src={NextButton} onClick={nextPhoto} /></button>
-                </div>
+                <button className={`${Styles.description__switchButton} ${Styles.description__switchButton_route_right}`} onClick={prevPhoto} ><img src={NextButton} /></button>
+                <button className={Styles.description__switchButton} ><img src={NextButton} onClick={nextPhoto} /></button>
             </div>
         )
     }
@@ -185,6 +183,8 @@ const Product = ({ product }) => {
             <OrderPopup show={show} closePopup={closePopup} />
             <Popup show={showImg} closePopup={closePopup}>
                 <img className={Styles.popupImg} src={PhotosArr[selectImg]} />
+                <button className={`${Styles.description__switchButton} ${Styles.description__switchButton_route_right}`} onClick={prevPhoto} ><img src={NextButton} /></button>
+                <button className={Styles.description__switchButton} ><img src={NextButton} onClick={nextPhoto} /></button>
             </Popup>
         </section>
     )
