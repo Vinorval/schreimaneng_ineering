@@ -77,7 +77,7 @@ const Product = ({ product }) => {
                 </div>
             </div>
             <ul className={Styles.detail} >
-                <div className={Styles.detail__block} >
+                <li className={Styles.detail__block} >
                     <h2 className={Styles.detail__title} >Характеристики</h2>
                     <ul className={Styles.detail__list} >
                         <li className={Styles.detail__item} >
@@ -113,66 +113,66 @@ const Product = ({ product }) => {
                             <p className={Styles.detail__valueText} >{product.characteristic.country}</p>
                         </li>
                     </ul>
-                </div>
-                {/*<div className={Styles.detail__block} >
-                    <h2 className={Styles.detail__title} ></h2>
+                </li>
+                <li className={Styles.detail__block} >
+                    <h2 className={Styles.detail__title} >Конструктивные характеристики</h2>
                     <ul className={Styles.detail__list} >
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Исполнение</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Назначение</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Материал корпуса</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Перечень КИПиА</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Тип контроллера / терморегулятора</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Максимальная мощность электронагревателя</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                     </ul>
-                </div>
-                <div className={Styles.detail__block} >
-                    <h2 className={Styles.detail__title} ></h2>
+                </li>
+                <li className={Styles.detail__block} >
+                    <h2 className={Styles.detail__title} >Характеристики двигателя</h2>
                     <ul className={Styles.detail__list} >
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Фазность и напряжение</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Частота тока (номинальная)</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Предельный номинальный ток электродвигателя</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Предельная номинальная мощность электродвигателя</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                     </ul>
-                </div>
-                <div className={Styles.detail__block} >
-                    <h2 className={Styles.detail__title} ></h2>
+                </li>
+                <li className={Styles.detail__block} >
+                    <h2 className={Styles.detail__title} >Климатические характеристики</h2>
                     <ul className={Styles.detail__list} >
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} ></p>
+                            <p className={Styles.detail__nameText} >Температура внешней среды</p>
                             <p className={Styles.detail__valueText} ></p>
                         </li>
                     </ul>
-                </div>*/}
+                </li>
             </ul>
             <div className={Styles.option} >
                 <h3 className={Styles.option__title} >Опции</h3>

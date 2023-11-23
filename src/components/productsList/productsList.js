@@ -6,11 +6,14 @@ import { getProductSuccess, postOrderSuccess } from "../../services/actions/acti
 
 import Styles from './productsList.module.css';
 import Item from '../../images/товар.jpg';
+import IconList from '../../images/Vector_list.svg';
+import IconTable from '../../images/Vector_table.svg';
 
 const ProductsList = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     const [startCard, setSartCard] = React.useState(0);
+    const [typeCard, setTypeCard] = React.useState('list');
     const { products } = useSelector( store => ({ products: store.products.products }) );
     const getProductsArr = () => {
         switch (location.pathname) {
@@ -23,7 +26,6 @@ const ProductsList = () => {
         }
     };
     const ProductCards = getProductsArr().slice(0,startCard);
-    console.log(ProductCards);
 
     function showsnumberList() {
         if( window.innerWidth < 768 ) {
@@ -45,7 +47,7 @@ const ProductsList = () => {
     }
 
     function hideButton() {
-        if (getProductsArr.length === startCard.length) {
+        if (getProductsArr().length == ProductCards.length) {
           return true
         } else {
           return false
@@ -55,19 +57,19 @@ const ProductsList = () => {
     const returnProduct = () => {
         return ProductCards.map((item) => {
                 return (
-                    <NavLink key={item._id} to={`/schreimaneng_ineering/catalog/controlPanel/${item._id}`} className={Styles.item}>
-                        <img className={Styles.item__image} src={Item} />
-                        <div className={Styles.item__description} >
+                    <li key={item._id} className={`${Styles.item} ${typeCard == 'list' && Styles.item_type_list}`}>
+                        <img className={`${Styles.item__image} ${typeCard == 'list' && Styles.item__image_type_list}`} src={Item} />
+                        <NavLink className={`${Styles.item__description} ${typeCard == 'list' && Styles.item__description_type_list}`} to={`/schreimaneng_ineering/catalog/controlPanel/${item._id}`}>
                             <h3 className={Styles.item__name} >Щит управления {item.name}</h3>
-                            <p className={Styles.item__text} >{item.description}</p>
+                            <p className={`${Styles.item__text} ${typeCard == 'list' && Styles.item__text_type_list}`} >{item.description}</p>
                             <p className={[Styles.item__text, Styles.item__text_type_last]} >Арт. {item._id}</p>
-                        </div>
-                        <div className={Styles.item__oder} >
+                        </NavLink>
+                        <div className={`${Styles.item__order} ${typeCard == 'list' && Styles.item__order_type_list}`} >
                             <p className={Styles.item__price} >₽ 56 260</p>
-                            <p className={Styles.item__text} >на заказ</p>
+                            <p className={`${Styles.item__text} ${typeCard == 'list' && Styles.item__text_type_list}`} >на заказ</p>
                             <button type='button' className={Styles.item__button} >Добавить</button>
                         </div>
-                    </NavLink>
+                    </li>
                 )
             })
     }
@@ -82,10 +84,14 @@ const ProductsList = () => {
                     <label htmlFor="SD"><input type="checkbox" id="SD" value="SD" className={Styles.version__item} />Системы диспетчеризации</label>
                 </ul>
             </div>
-            <ul className={Styles.list}>
+            <ul className={`${Styles.list} ${typeCard == 'list' && Styles.list_type_list}`}>
+                <div className={`${Styles.catalog__buttons} ${typeCard == 'list' && Styles.catalog__buttons_type_list}`}>
+                    <button className={Styles.catalog__button}><img src={IconList} onClick={() => setTypeCard('list')} /></button>
+                    <button className={Styles.catalog__button} ><img src={IconTable} onClick={() => setTypeCard('table')}/></button>
+                </div>
                 {returnProduct()}
             </ul>
-            <button className={Styles.buttonMore} onClick={handleMore} >Показать ещё</button>
+            {!hideButton() && <button className={Styles.buttonMore} onClick={handleMore} >Показать ещё</button>}
         </section>
     )
 }
