@@ -15,6 +15,7 @@ const ProductsList = () => {
     const dispatch = useDispatch();
     const [show, setShow] = React.useState(false);
     const [product, setProduct] = React.useState({});
+    //let details = [];
     const [startCard, setSartCard] = React.useState(0);
     const [typeCard, setTypeCard] = React.useState('list');
     const { products } = useSelector( store => ({ products: store.products.products }) );
@@ -37,6 +38,10 @@ const ProductsList = () => {
     };
 
     const ProductCards = getProductsArr().slice(0,startCard);
+    const details = [...new Set(getProductsArr().map( item => item.characteristic.series ))];
+    //const filter = getProductsArr().map( item => {
+    //    return !details.includes(item.characteristic.series) && details.push(item.characteristic.series)
+    //} )
 
     function showsnumberList() {
         if( window.innerWidth < 768 ) {
@@ -46,7 +51,11 @@ const ProductsList = () => {
     };
   
     React.useEffect(() => {
-        showsnumberList()
+        showsnumberList();
+        //console.log(details)
+        //getProductsArr().forEach( item => {
+        //    return !details.includes(item.characteristic.series) && details.push(item.characteristic.series)
+        //} )
     }, []);
 
     function handleMore() {
@@ -67,6 +76,7 @@ const ProductsList = () => {
 
     const returnProduct = () => {
         return ProductCards.map((item) => {
+            //details.push(item.characteristic.series);
                 return (
                     <li key={item._id} className={`${Styles.item} ${typeCard == 'list' && Styles.item_type_list}`}>
                         <img className={`${Styles.item__image} ${typeCard == 'list' && Styles.item__image_type_list}`} src={Item} />
@@ -84,6 +94,7 @@ const ProductsList = () => {
                 )
             })
     }
+    console.log(details);
 
     return (
         <section className={Styles.catalog}>
@@ -91,8 +102,13 @@ const ProductsList = () => {
             <div className={Styles.version}>
                 <h3 className={Styles.version__title}>Автоматика</h3>
                 <ul className={Styles.version__list}>
-                    <label htmlFor="V"><input type="checkbox" id="V" value="V" className={Styles.version__item} /> Щиты для вентиляторов, V</label>
-                    <label htmlFor="SD"><input type="checkbox" id="SD" value="SD" className={Styles.version__item} />Системы диспетчеризации</label>
+                    {/*<label htmlFor="V"><input type="checkbox" id="V" value="V" className={Styles.version__item} /> Щиты для вентиляторов, V</label>
+                    <label htmlFor="SD"><input type="checkbox" id="SD" value="SD" className={Styles.version__item} />Системы диспетчеризации</label>*/}
+                    {details.map( item => {
+                        return (
+                            <li>{item}</li>
+                        )
+                    } )}
                 </ul>
             </div>
             <ul className={`${Styles.list} ${typeCard == 'list' && Styles.list_type_list}`}>
