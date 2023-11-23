@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/schreimaneng_ineering/static/css/main.dca6b5db.css",
-    "main.js": "/schreimaneng_ineering/static/js/main.c4fb00f2.js",
+    "main.css": "/schreimaneng_ineering/static/css/main.9f4c47c7.css",
+    "main.js": "/schreimaneng_ineering/static/js/main.c63cc7a0.js",
     "static/js/787.f60c5ca6.chunk.js": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js",
     "static/media/foto-man.png": "/schreimaneng_ineering/static/media/foto-man.9bbf0c62065d115c954a.png",
     "static/media/map.jpg": "/schreimaneng_ineering/static/media/map.a2ff11934878f3406cd0.jpg",
@@ -14,6 +14,8 @@
     "static/media/товар.jpg": "/schreimaneng_ineering/static/media/товар.f740f0761804f91484e9.jpg",
     "static/media/icon-whatsapp.svg": "/schreimaneng_ineering/static/media/icon-whatsapp.414fd02a88a065e9b52f11f2c86ee955.svg",
     "static/media/icon-telegram.svg": "/schreimaneng_ineering/static/media/icon-telegram.3ae54a51076ce9681e7665b6ebc8d780.svg",
+    "static/media/document_paper_work_text_file_icon_191646 1.svg": "/schreimaneng_ineering/static/media/document_paper_work_text_file_icon_191646 1.474078812d2c080fcc2f67a39647367f.svg",
+    "static/media/Vector_table.svg": "/schreimaneng_ineering/static/media/Vector_table.9c92ad6d193f3ef5e04c080cbb2f9945.svg",
     "static/media/basket_icon-icons.com_67985 (1) 1.svg": "/schreimaneng_ineering/static/media/basket_icon-icons.com_67985 (1) 1.798e1cc77fcb512acbcbc400e0d73316.svg",
     "static/media/Logo.svg": "/schreimaneng_ineering/static/media/Logo.2b4764a81d5f6be0da3831efa3d91640.svg",
     "index.html": "/schreimaneng_ineering/index.html",
@@ -21,13 +23,14 @@
     "static/media/Plus_icon.svg": "/schreimaneng_ineering/static/media/Plus_icon.3f71e7de4eca8b4a4d69cd24c4a9bb6c.svg",
     "static/media/4105962-add-expand-plus_113920.svg": "/schreimaneng_ineering/static/media/4105962-add-expand-plus_113920.2e386d62e2d84f3ccc11ef0b718c01fa.svg",
     "static/media/4105964-collapse-minus-reduce-remove_113927.svg": "/schreimaneng_ineering/static/media/4105964-collapse-minus-reduce-remove_113927.879df8cc2610f505f8bc42db52145f2c.svg",
+    "static/media/Vector_list.svg": "/schreimaneng_ineering/static/media/Vector_list.6b403540a4f23957af2842310076a33f.svg",
     "static/media/next.svg": "/schreimaneng_ineering/static/media/next.82bc30307efea91c53de17a7fe4f50c0.svg",
-    "main.dca6b5db.css.map": "/schreimaneng_ineering/static/css/main.dca6b5db.css.map",
-    "main.c4fb00f2.js.map": "/schreimaneng_ineering/static/js/main.c4fb00f2.js.map",
+    "main.9f4c47c7.css.map": "/schreimaneng_ineering/static/css/main.9f4c47c7.css.map",
+    "main.c63cc7a0.js.map": "/schreimaneng_ineering/static/js/main.c63cc7a0.js.map",
     "787.f60c5ca6.chunk.js.map": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dca6b5db.css",
-    "static/js/main.c4fb00f2.js"
+    "static/css/main.9f4c47c7.css",
+    "static/js/main.c63cc7a0.js"
   ]
 }
