@@ -8,13 +8,16 @@ import OrderPopup from "../orderPopup/OrderPopup";
 import { PhotosArr } from "../../utils/utils";
 import NextButton from '../../images/next.svg';
 import Popup from "../popup/popup";
+import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Product = ({ product }) => {
+    const location = useLocation();
     const dispatch = useDispatch();
     const [show, setShow] = React.useState(false);
     const [ showImg, setShowImg] = useState(false);
     const [selectImg, setSelectImg] = React.useState(0);
-    console.log(product.description.replace(/;/g, "\n"));
+    console.log(location.pathname);
 
     const showPopup = () => setShow(true);
     const showPopupImg = () => setShowImg(true);
@@ -63,6 +66,13 @@ const Product = ({ product }) => {
     return (
         <section className={Styles.product} >
             <h2 className={Styles.product__title}>Щит управления {product.name}</h2>
+            <nav>
+                <NavLink to={`${location.pathname}#detail`}>Общая информация</NavLink>
+                <NavLink to={`${location.pathname}`}>Характиристики</NavLink>
+                <NavLink to={`${location.pathname}`}>Документы</NavLink>
+                <NavLink to={`${location.pathname}`}>Опции</NavLink>
+                <NavLink to={`${location.pathname}`}>Дополнительная информация</NavLink>
+            </nav>
             <div className={Styles.description} >
                 {returnPhotoProduct()}
                 <div className={Styles.description__info}>
@@ -76,7 +86,7 @@ const Product = ({ product }) => {
                     </div>
                 </div>
             </div>
-            <ul className={Styles.detail} >
+            <ul className={Styles.detail}  >
                 <li className={Styles.detail__block} >
                     <h2 className={Styles.detail__title} >Характеристики</h2>
                     <ul className={Styles.detail__list} >
@@ -174,13 +184,13 @@ const Product = ({ product }) => {
                     </ul>
                 </li>
             </ul>
-            <div className={Styles.option} >
+            <div className={Styles.option} id={'detail'} >
                 <h3 className={Styles.option__title} >Опции</h3>
                 <ul className={Styles.option__list} >
                     {product && returnOptions()}
                 </ul>
             </div>
-            <OrderPopup show={show} closePopup={closePopup} />
+            <OrderPopup show={show} closePopup={closePopup} product={product} />
             <Popup show={showImg} closePopup={closePopup}>
                 <img className={Styles.popupImg} src={PhotosArr[selectImg]} />
                 <button className={`${Styles.description__switchButton} ${Styles.description__switchButton_route_right}`} onClick={prevPhoto} ><img src={NextButton} /></button>

@@ -31,8 +31,8 @@ const AppHeader = () => {
         <header className={Styles.header}>
             <div className={Styles.contacts}>
                 <div className={Styles.contacts__socials}>
-                    <a><img src={WhatsApp} className={Styles.contacts__social}/></a>
-                    <a><img src={Telegram} className={Styles.contacts__social}/></a>
+                    <a href='https://wa.me/79137754795?text=' ><img src={WhatsApp} className={Styles.contacts__social}/></a>
+                    <a href="https://t.me/Germech"><img src={Telegram} className={Styles.contacts__social}/></a>
                 </div>
                 <div className={Styles.contacts__phone}>
                     <p>+7 (913) 775-47-95</p>

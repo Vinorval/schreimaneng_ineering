@@ -7,14 +7,24 @@ import { getProductSuccess, postOrderSuccess } from "../../services/actions/acti
 import Styles from './productsList.module.css';
 import Item from '../../images/товар.jpg';
 import IconList from '../../images/Vector_list.svg';
+import OrderPopup from "../orderPopup/OrderPopup";
 import IconTable from '../../images/Vector_table.svg';
 
 const ProductsList = () => {
     const location = useLocation();
     const dispatch = useDispatch();
+    const [show, setShow] = React.useState(false);
+    const [product, setProduct] = React.useState({});
     const [startCard, setSartCard] = React.useState(0);
     const [typeCard, setTypeCard] = React.useState('list');
     const { products } = useSelector( store => ({ products: store.products.products }) );
+
+    const showPopup = (item) => {
+        setShow(true);
+        setProduct(item)
+    };
+    const closePopup = () => setShow(false);
+
     const getProductsArr = () => {
         switch (location.pathname) {
             case '/schreimaneng_ineering/catalog/controlPanel': {
@@ -25,6 +35,7 @@ const ProductsList = () => {
             }
         }
     };
+
     const ProductCards = getProductsArr().slice(0,startCard);
 
     function showsnumberList() {
@@ -67,7 +78,7 @@ const ProductsList = () => {
                         <div className={`${Styles.item__order} ${typeCard == 'list' && Styles.item__order_type_list}`} >
                             <p className={Styles.item__price} >₽ 56 260</p>
                             <p className={`${Styles.item__text} ${typeCard == 'list' && Styles.item__text_type_list}`} >на заказ</p>
-                            <button type='button' className={Styles.item__button} >Добавить</button>
+                            <button type='button' className={Styles.item__button} onClick={() => showPopup(item)} >Добавить</button>
                         </div>
                     </li>
                 )
@@ -92,6 +103,7 @@ const ProductsList = () => {
                 {returnProduct()}
             </ul>
             {!hideButton() && <button className={Styles.buttonMore} onClick={handleMore} >Показать ещё</button>}
+            { show && <OrderPopup show={show} closePopup={closePopup} product={product} />}
         </section>
     )
 }

@@ -11,22 +11,22 @@ import Item from '../../images/товар.jpg';
 import Plus from '../../images/4105962-add-expand-plus_113920.svg';
 import Minus from '../../images/4105964-collapse-minus-reduce-remove_113927.svg';
 
-const OrderPopup = ({ show, closePopup }) => {
+const OrderPopup = ({ show, closePopup, product }) => {
     const dispatch = useDispatch();
     const { products } = useSelector( store => ({ products: store.products.products }) );
     const { selectOptions } = useSelector( store => ({ selectOptions: store.products.product }) );
     const location = useLocation();
 
-    const findProduct = () => {
-        switch (location.pathname.slice(0, 43)) {
-            case '/schreimaneng_ineering/catalog/controlPanel': {
+    //const findProduct = () => {
+        //switch (location.pathname.slice(0, 43)) {
+            //case '/schreimaneng_ineering/catalog/controlPanel': {
                 //console.log(products.controlPanel)
-                return products.controlPanel.find(item => item._id == location.pathname.slice(-4))
-            }
-        }
-    }
+               // return products.controlPanel.find(item => item._id == location.pathname.slice(-4))
+            //}
+        //}
+    //}
 
-    const product = findProduct()
+    //const product = findProduct()
 
     const returnOptions = () => {
         return product.options.map((item, index) => {

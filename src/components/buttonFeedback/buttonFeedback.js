@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Styles from './buttonFeedback.module.css';
 
-import FormButton from '../../images/icons8-форма-50.png';
+import FormButton from '../../images/document_paper_work_text_file_icon_191646 1.svg';
 import Popup from "../popup/popup";
 import Form from '../form/form';
 

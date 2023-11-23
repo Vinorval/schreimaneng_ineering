@@ -13,8 +13,8 @@ const Footer = () => {
                 </div>
                 <p className={`${Styles.footer__text} ${Styles.footer__text_place_before}`}>Адрес: г. Новосибирск, ул. Красный Проспект д.5</p>
                 <div className={Styles.social}>
-                    <a><img src={WhatsApp} className={Styles.social__link} /></a>
-                    <a><img src={Telegram} className={Styles.social__link} /></a>
+                    <a href='https://wa.me/79137754795?text=' ><img src={WhatsApp} className={Styles.social__link} /></a>
+                    <a href="https://t.me/Germech"><img src={Telegram} className={Styles.social__link} /></a>
                 </div>
             </div>
         </footer>

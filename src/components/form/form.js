@@ -19,7 +19,7 @@ const Form = () => {
                 <li className={Styles.documentsBlock}>
                     <p className={Styles.documentsBlock__title}>Оставьте заявку ниже</p>
                     <div className={Styles.documentsBlock__block}>
-                        <button className={Styles.documentsBlock__button}>
+                        {/*<button className={Styles.documentsBlock__button}>*/}
                             {/*<img src={Plus} />
                             <p className={Styles.documentsBlock__name}>Добавить файл</p>*/}
                             <FilePond
@@ -30,13 +30,11 @@ const Form = () => {
                                 name="files" /* sets the file input name, it's filepond by default */
                                 labelIdle='Добавить файл'
                             />
-                        </button>
                         <ul className={Styles.documentsBlock__list}>
-                            <li className={Styles.documentsBlock__document}>
+                            {/*<li className={Styles.documentsBlock__document}>*/}
                                 {/*<img src={Document} />
                                 <p className={Styles.documentsBlock__name}>Название файла</p>*/}
-                                {files}
-                            </li>
+                                
                         </ul>
                     </div>
                 </li>
