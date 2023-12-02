@@ -13,6 +13,8 @@ import IconTable from '../../images/Vector_table.svg';
 const ProductsList = () => {
     const location = useLocation();
     const dispatch = useDispatch();
+    const [titlePage, setTitlePage] = React.useState('');
+    let title;
     const [show, setShow] = React.useState(false);
     const [product, setProduct] = React.useState({});
     //let details = [];
@@ -29,7 +31,14 @@ const ProductsList = () => {
     const getProductsArr = () => {
         switch (location.pathname) {
             case '/schreimaneng_ineering/catalog/controlPanel': {
+                //setTitlePage('Щиты управления');
+                title = 'Щиты управления';
                 return products.controlPanel
+            }
+            case '/schreimaneng_ineering/catalog/autoDevice': {
+                //setTitlePage('Приборы автоматики');
+                title = 'Приборы автоматики';
+                return products.autoDevice
             }
             default: {
                 return [];
@@ -81,7 +90,7 @@ const ProductsList = () => {
                     <li key={item._id} className={`${Styles.item} ${typeCard == 'list' && Styles.item_type_list}`}>
                         <img className={`${Styles.item__image} ${typeCard == 'list' && Styles.item__image_type_list}`} src={Item} />
                         <NavLink className={`${Styles.item__description} ${typeCard == 'list' && Styles.item__description_type_list}`} to={`/schreimaneng_ineering/catalog/controlPanel/${item._id}`}>
-                            <h3 className={Styles.item__name} >Щит управления {item.name}</h3>
+                            <h3 className={Styles.item__name} >{item.name}</h3>
                             <p className={`${Styles.item__text} ${typeCard == 'list' && Styles.item__text_type_list}`} >{item.description}</p>
                             <p className={[Styles.item__text, Styles.item__text_type_last]} >Арт. {item._id}</p>
                         </NavLink>
@@ -98,7 +107,7 @@ const ProductsList = () => {
 
     return (
         <section className={Styles.catalog}>
-            <h2 className={Styles.catalog__title}>ЩИТЫ УПРАВЛЕНИЯ</h2>
+            <h2 className={Styles.catalog__title}>{title}</h2>
             <div className={Styles.version}>
                 <h3 className={Styles.version__title}>Автоматика</h3>
                 <ul className={Styles.version__list}>
