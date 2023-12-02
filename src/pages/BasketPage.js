@@ -25,25 +25,25 @@ const BasketPage = () => {
     const returnProduct = () => {
         return order.map((item) => {
             return (
-                <NavLink to={`/schreimaneng_ineering/catalog/controlPanel/${item[0]._id}`} className={Styles.item}>
-                    <img className={Styles.item__image} src={Item} />
+                <li className={Styles.item}>
+                    <NavLink to={`/schreimaneng_ineering/catalog/controlPanel/${item[0]._id}`} className={Styles.item__link_hight}>
+                        <img className={Styles.item__image} src={Item} />
+                    </NavLink>
                     <div className={Styles.item__description} >
-                        <h3 className={Styles.item__name} >Щит управления {item[0].name}</h3>
+                        <NavLink to={`/schreimaneng_ineering/catalog/controlPanel/${item[0]._id}`} className={Styles.item__name} >{item[0].name}</NavLink>
                         <p className={Styles.item__text} >{item[0]._id}</p>
                     </div>
-                    <p className={Styles.item__price} >₽ 56 260</p>
                     <div className={Styles.item__quantity}>
-                        <button className={Styles.item__count}><img src={Minus} /></button>
-                        <input className={Styles.item__value} defaultValue={1} />
-                        <button className={Styles.item__count}><img src={Plus} /></button>
+                        <p className={Styles.item__price} >₽ 56 260</p>
+                        <div className={Styles.item__form}>
+                            <button className={Styles.item__count}><img src={Minus} className={Styles.item__countIkon} /></button>
+                            <input className={Styles.item__value} defaultValue={1} />
+                            <button className={Styles.item__count}><img src={Plus} className={Styles.item__countIkon} /></button>
+                        </div>
                         <p className={Styles.item__price} >₽ 112 620</p>
                     </div>
-                    <div className={Styles.item__data}>
-                        <p>Ближайщая готовность:</p>
-                        <p>11.09.2023</p>
-                    </div>
-                    <button className={Styles.basket__delButten}><img src={Del} /></button>
-                </NavLink>
+                    <button className={`${Styles.basket__delButten} ${Styles.basket__delButten_position_item}`}><img src={Del} /></button>
+                </li>
             )
         })
     }
@@ -53,8 +53,8 @@ const BasketPage = () => {
     return (
         <section>
             <Location path={locationLinks} />
+            <h2 className={Styles.basket__title}>Корзина</h2>
             <div className={Styles.basket}>
-                <h2 className={Styles.basket__title}>Корзина</h2>
                 <div className={Styles.basket__info}>
                     <p className={Styles.basket__subtitle} >Цены и сроки рассчитаны для отгрузки из филиала Новосибирск.</p>
                     <button className={Styles.basket__delButten}><img src={Del} onClick={clickButton} /></button>
@@ -67,27 +67,27 @@ const BasketPage = () => {
                     <p className={Styles.summe__price}>⃏ 117 300</p>
                     <ul className={Styles.summe__list}>
                         <li className={Styles.characteristic} >
-                            <p className={Styles.characteristic__name}>Всего товаров:</p>
-                            <p className={Styles.characteristic__text}>3 шт.</p>
+                            <p className={Styles.characteristic__text_margin_none}>Всего товаров:</p>
+                            <p className={Styles.characteristic__text_margin_none}>3 шт.</p>
                         </li>
                         <li className={Styles.characteristic}>
-                            <p className={Styles.characteristic__name}>Вес:</p>
-                            <p className={Styles.characteristic__text}>6.42 кг.</p>
+                            <p className={Styles.characteristic__text_margin_none}>Вес:</p>
+                            <p className={Styles.characteristic__text_margin_none}>6.42 кг.</p>
                         </li>
                         <li className={Styles.characteristic}>
-                            <p className={Styles.characteristic__name}>Объем:</p>
-                            <p className={Styles.characteristic__text}>0.03 м³</p>
+                            <p className={Styles.characteristic__text_margin_none}>Объем:</p>
+                            <p className={Styles.characteristic__text_margin_none}>0.03 м³</p>
                         </li>
                         <li className={Styles.characteristic}>
-                            <p className={Styles.characteristic__name}>Самовывоз</p>
+                            <p className={Styles.characteristic__text_margin_none}>Самовывоз</p>
                         </li>
                         <li className={Styles.characteristic}>
-                            <p className={Styles.characteristic__name}>Адрес:</p>
-                            <p className={Styles.characteristic__text}>Новосибирск, ул. Выборная, д. 141</p>
+                            <p className={Styles.characteristic__text_margin_none}>Адрес:</p>
+                            <p className={`${Styles.characteristic__text_margin_none} ${Styles.characteristic__text_adress}`}>Новосибирск, ул. Выборная, д. 141</p>
                         </li>
                         <li className={Styles.characteristic}>
-                            <p className={Styles.characteristic__name}>Дата ближайшей отгрузки:</p>
-                            <p className={Styles.characteristic__text}>11.09.2023</p>
+                            <p className={Styles.characteristic__text_margin_none}>Дата ближайшей отгрузки:</p>
+                            <p className={Styles.characteristic__text_margin_none}>11.09.2023</p>
                         </li>
                     </ul>
                     <span className={Styles.summe__subtext} >Цены и сроки рассчитаны на дату и время обновления страницы и являются предварительными.</span>
