@@ -32,6 +32,26 @@
     padding: 0;
     display: grid;
     gap: 16px;
+    text-align: start;
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.vertion__label {
+    display: grid;
+    grid-template-columns: 20px 260px;
+    gap: 6px;
+}
+
+.version__item {
+    width: 20px;
+    height: 20px;
+}
+
+.version__text {
+    margin: 0;
 }
 
 .list {

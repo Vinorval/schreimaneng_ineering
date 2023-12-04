@@ -13,14 +13,27 @@ import IconTable from '../../images/Vector_table.svg';
 const ProductsList = () => {
     const location = useLocation();
     const dispatch = useDispatch();
-    const [titlePage, setTitlePage] = React.useState('');
     let title;
     const [show, setShow] = React.useState(false);
     const [product, setProduct] = React.useState({});
-    //let details = [];
     const [startCard, setSartCard] = React.useState(0);
     const [typeCard, setTypeCard] = React.useState('list');
+    const [checked, setChecked] = useState([]);
+    const [filterCheck, setFilterCheck] = useState([]);
     const { products } = useSelector( store => ({ products: store.products.products }) );
+
+    function chengeCheckbox(value) {
+        const currentIndex = checked.indexOf(value);
+        const newChecked = [...checked];
+
+        if(currentIndex === -1){
+            newChecked.push(value);
+        } else {
+            newChecked.splice(currentIndex, 1);
+        }
+
+        setChecked(newChecked);
+    }
 
     const showPopup = (item) => {
         setShow(true);
@@ -31,12 +44,10 @@ const ProductsList = () => {
     const getProductsArr = () => {
         switch (location.pathname) {
             case '/schreimaneng_ineering/catalog/controlPanel': {
-                //setTitlePage('Щиты управления');
                 title = 'Щиты управления';
                 return products.controlPanel
             }
             case '/schreimaneng_ineering/catalog/autoDevice': {
-                //setTitlePage('Приборы автоматики');
                 title = 'Приборы автоматики';
                 return products.autoDevice
             }
@@ -47,10 +58,17 @@ const ProductsList = () => {
     };
 
     const ProductCards = getProductsArr().slice(0,startCard);
+    const filterCards = () => {
+        let productReturn = [];
+        for(let i=0; i < checked.length; i++) {
+            console.log(checked[i]);
+            let product = getProductsArr().filter(item => item.characteristic.series == checked[i]);
+            productReturn = productReturn.concat(product);
+        }
+        return productReturn;
+    }
+
     const details = [...new Set(getProductsArr().map( item => item.characteristic.series ))];
-    //const filter = getProductsArr().map( item => {
-    //    return !details.includes(item.characteristic.series) && details.push(item.characteristic.series)
-    //} )
 
     function showsnumberList() {
         if( window.innerWidth < 768 ) {
@@ -61,10 +79,6 @@ const ProductsList = () => {
   
     React.useEffect(() => {
         showsnumberList();
-        //console.log(details)
-        //getProductsArr().forEach( item => {
-        //    return !details.includes(item.characteristic.series) && details.push(item.characteristic.series)
-        //} )
     }, []);
 
     function handleMore() {
@@ -83,9 +97,8 @@ const ProductsList = () => {
         }
     }
 
-    const returnProduct = () => {
-        return ProductCards.map((item) => {
-            //details.push(item.characteristic.series);
+    const returnProduct = (cards) => {
+        return cards.map((item) => {
                 return (
                     <li key={item._id} className={`${Styles.item} ${typeCard == 'list' && Styles.item_type_list}`}>
                         <img className={`${Styles.item__image} ${typeCard == 'list' && Styles.item__image_type_list}`} src={Item} />
@@ -103,7 +116,7 @@ const ProductsList = () => {
                 )
             })
     }
-    console.log(details);
+    //console.log(details);
 
     return (
         <section className={Styles.catalog}>
@@ -111,11 +124,18 @@ const ProductsList = () => {
             <div className={Styles.version}>
                 <h3 className={Styles.version__title}>Автоматика</h3>
                 <ul className={Styles.version__list}>
-                    {/*<label htmlFor="V"><input type="checkbox" id="V" value="V" className={Styles.version__item} /> Щиты для вентиляторов, V</label>
-                    <label htmlFor="SD"><input type="checkbox" id="SD" value="SD" className={Styles.version__item} />Системы диспетчеризации</label>*/}
-                    {details.map( item => {
+                    {details.map( (item, index) => {
                         return (
-                            <li>{item}</li>
+                            <label htmlFor={index} className={Styles.vertion__label}>
+                                <input
+                                    key={index} 
+                                    type="checkbox" 
+                                    id={index} 
+                                    value={item} 
+                                    className={Styles.version__item}  
+                                    onChange={() => chengeCheckbox(item)} />
+                                <p className={Styles.version__text}>{item}</p>
+                            </label>
                         )
                     } )}
                 </ul>
@@ -125,7 +145,7 @@ const ProductsList = () => {
                     <button className={Styles.catalog__button}><img src={IconList} onClick={() => setTypeCard('list')} /></button>
                     <button className={Styles.catalog__button} ><img src={IconTable} onClick={() => setTypeCard('table')}/></button>
                 </div>
-                {returnProduct()}
+                {(checked.length == 0) ? returnProduct(ProductCards) : returnProduct(filterCards())}
             </ul>
             {!hideButton() && <button className={Styles.buttonMore} onClick={handleMore} >Показать ещё</button>}
             { show && <OrderPopup show={show} closePopup={closePopup} product={product} />}
