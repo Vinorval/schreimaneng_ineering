@@ -17,6 +17,7 @@ const Product = ({ product }) => {
     const [show, setShow] = React.useState(false);
     const [ showImg, setShowImg] = useState(false);
     const [selectImg, setSelectImg] = React.useState(0);
+    const { products } = useSelector( store => ({ products: store.products.products }) );
     console.log(location.pathname);
 
     const showPopup = () => setShow(true);
@@ -36,7 +37,7 @@ const Product = ({ product }) => {
     const returnOptions = () => {
         return product.options.map((item, index) => {
 
-            return optoins.map((el) => {
+            return products.autoDevice.map((el) => {
                 return el.name == item && (
                     <Option key={el._id} el={el} name={el.name} description={el.description} inPopup={show} />
                 )
@@ -95,32 +96,32 @@ const Product = ({ product }) => {
                             <p className={Styles.detail__valueText} >Автоматика</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Категория</p>
-                            <p className={Styles.detail__valueText} >{product.characteristic.category}</p>
+                            <p className={Styles.detail__nameText} >{product.characteristic.category[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.category[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Серия</p>
-                            <p className={Styles.detail__valueText} >{product.characteristic.series}</p>
+                            <p className={Styles.detail__nameText} >{product.characteristic.series[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.series[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Гарантия</p>
-                            <p className={Styles.detail__valueText} >{product.characteristic.warranty} мес.</p>
+                            <p className={Styles.detail__nameText} >{product.characteristic.warranty[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.warranty[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Масса</p>
-                            <p className={Styles.detail__valueText} >{product.characteristic.weight}</p>
+                            <p className={Styles.detail__nameText} >{product.characteristic.weight[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.weight[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Объем</p>
-                            <p className={Styles.detail__valueText} >{product.characteristic.volume}</p>
+                            <p className={Styles.detail__nameText} >{product.characteristic.volume[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.volume[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Производитель</p>
-                            <p className={Styles.detail__valueText} >{product.characteristic.fabricator}</p>
+                            <p className={Styles.detail__nameText} >{product.characteristic.fabricator[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.fabricator[1]}</p>
                         </li>
                         <li className={Styles.detail__item}>
-                            <p className={Styles.detail__nameText} >Страна производства</p>
-                            <p className={Styles.detail__valueText} >{product.characteristic.country}</p>
+                            <p className={Styles.detail__nameText} >{product.characteristic.country[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.characteristic.country[1]}</p>
                         </li>
                     </ul>
                 </li>
@@ -128,28 +129,16 @@ const Product = ({ product }) => {
                     <h2 className={Styles.detail__title} >Конструктивные характеристики</h2>
                     <ul className={Styles.detail__list} >
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Исполнение</p>
-                            <p className={Styles.detail__valueText} ></p>
+                            <p className={Styles.detail__nameText} >{product.designCharacteristics.execution[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.designCharacteristics.execution[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Назначение</p>
-                            <p className={Styles.detail__valueText} ></p>
+                            <p className={Styles.detail__nameText} >{product.designCharacteristics.managedEquipment[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.designCharacteristics.managedEquipment[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Материал корпуса</p>
-                            <p className={Styles.detail__valueText} ></p>
-                        </li>
-                        <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Перечень КИПиА</p>
-                            <p className={Styles.detail__valueText} ></p>
-                        </li>
-                        <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Тип контроллера / терморегулятора</p>
-                            <p className={Styles.detail__valueText} ></p>
-                        </li>
-                        <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Максимальная мощность электронагревателя</p>
-                            <p className={Styles.detail__valueText} ></p>
+                            <p className={Styles.detail__nameText} >{product.designCharacteristics.housingMaterial[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.designCharacteristics.housingMaterial[1]}</p>
                         </li>
                     </ul>
                 </li>
@@ -157,20 +146,20 @@ const Product = ({ product }) => {
                     <h2 className={Styles.detail__title} >Характеристики двигателя</h2>
                     <ul className={Styles.detail__list} >
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Фазность и напряжение</p>
-                            <p className={Styles.detail__valueText} ></p>
+                            <p className={Styles.detail__nameText} >{product.engineCharacteristics.phaseAndVoltage[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.engineCharacteristics.phaseAndVoltage[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Частота тока (номинальная)</p>
-                            <p className={Styles.detail__valueText} ></p>
+                            <p className={Styles.detail__nameText} >{product.engineCharacteristics.currentFrequency[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.engineCharacteristics.currentFrequency[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Предельный номинальный ток электродвигателя</p>
-                            <p className={Styles.detail__valueText} ></p>
+                            <p className={Styles.detail__nameText} >{product.engineCharacteristics.ratedElectricMotor[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.engineCharacteristics.ratedElectricMotor[1]}</p>
                         </li>
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Предельная номинальная мощность электродвигателя</p>
-                            <p className={Styles.detail__valueText} ></p>
+                            <p className={Styles.detail__nameText} >{product.engineCharacteristics.ratedPowerElectricMotor[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.engineCharacteristics.ratedPowerElectricMotor[1]}</p>
                         </li>
                     </ul>
                 </li>
@@ -178,8 +167,8 @@ const Product = ({ product }) => {
                     <h2 className={Styles.detail__title} >Климатические характеристики</h2>
                     <ul className={Styles.detail__list} >
                         <li className={Styles.detail__item} >
-                            <p className={Styles.detail__nameText} >Температура внешней среды</p>
-                            <p className={Styles.detail__valueText} ></p>
+                            <p className={Styles.detail__nameText} >{product.climaticCharacteristics.temperature[0]}</p>
+                            <p className={Styles.detail__valueText} >{product.climaticCharacteristics.temperature[1]}</p>
                         </li>
                     </ul>
                 </li>
