@@ -3,7 +3,7 @@ export const productsObj = {
         {
             _id: '0001',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-3-К37',
             staticName: 'ЩУ-ВЕНТ-В-3-0,37',
             ratedEnginePower: '0,37',
@@ -41,7 +41,7 @@ export const productsObj = {
         {
             _id: '0002',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-3-2К2',
             staticName: 'ЩУ-ВЕНТ-В-3-2,2',
             ratedEnginePower: '2,2',
@@ -79,7 +79,7 @@ export const productsObj = {
         {
             _id: '0003',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-3-3К',
             staticName: 'ЩУ-ВЕНТ-В-3-3',
             ratedEnginePower: '3',
@@ -117,7 +117,7 @@ export const productsObj = {
         {
             _id: '0004',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-3-4К',
             staticName: 'ЩУ-ВЕНТ-В-3-4',
             ratedEnginePower: '4',
@@ -155,7 +155,7 @@ export const productsObj = {
         {
             _id: '0005',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-3-5К5',
             staticName: 'ЩУ-ВЕНТ-В-3-5,5',
             ratedEnginePower: '5,5',
@@ -193,7 +193,7 @@ export const productsObj = {
         {
             _id: '0006',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-3-7К5',
             staticName: 'ЩУ-ВЕНТ-В-3-7,5',
             ratedEnginePower: '7,5',
@@ -231,7 +231,7 @@ export const productsObj = {
         {
             _id: '0007',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-3-11К',
             staticName: 'ЩУ-ВЕНТ-В-3-11',
             ratedEnginePower: '11',
@@ -269,7 +269,7 @@ export const productsObj = {
         {
             _id: '0008',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-3-15К',
             staticName: 'ЩУ-ВЕНТ-В-3-15',
             ratedEnginePower: '15',
@@ -307,7 +307,7 @@ export const productsObj = {
         {
             _id: '0009',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-1-ЗМ-К37',
             staticName: 'ЩУ-ВЕНТ-В-1-ЗМ-0,37-пК.УЧ.Ф',
             ratedEnginePower: '0,37',
@@ -345,7 +345,7 @@ export const productsObj = {
         {
             _id: '0010',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-1-ЗМ-2К2',
             staticName: 'ЩУ-ВЕНТ-В-1-ЗМ-2,2-пК.УЧ.Ф',
             ratedEnginePower: '2,2',
@@ -383,7 +383,7 @@ export const productsObj = {
         {
             _id: '0011',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-1-ЗМ-3К',
             staticName: 'ЩУ-ВЕНТ-В-1-ЗМ-3-пК.УЧ.Ф',
             ratedEnginePower: '3',
@@ -421,7 +421,7 @@ export const productsObj = {
         {
             _id: '0012',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-1-ЗМ-4К',
             staticName: 'ЩУ-ВЕНТ-В-1-ЗМ-4-пК.УЧ.Ф',
             ratedEnginePower: '4',
@@ -459,7 +459,7 @@ export const productsObj = {
         {
             _id: '0013',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-1-ЗМ-5К5',
             staticName: 'ЩУ-ВЕНТ-В-1-ЗМ-5,5-пК.УЧ.Ф',
             ratedEnginePower: '5,5',
@@ -497,7 +497,7 @@ export const productsObj = {
         {
             _id: '0014',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-1-ЗМ-7К5',
             staticName: 'ЩУ-ВЕНТ-В-1-ЗМ-7,5-пК.УЧ.Ф',
             ratedEnginePower: '7,5',
@@ -535,7 +535,7 @@ export const productsObj = {
         {
             _id: '0015',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-1-ЗМ-11К',
             staticName: 'ЩУ-ВЕНТ-В-1-ЗМ-11-пК.УЧ.Ф',
             ratedEnginePower: '11',
@@ -573,7 +573,7 @@ export const productsObj = {
         {
             _id: '0016',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-В-1-ЗМ-15К',
             staticName: 'ЩУ-ВЕНТ-В-1-ЗМ-15-пК.УЧ.Ф',
             ratedEnginePower: '15',
@@ -611,7 +611,7 @@ export const productsObj = {
         {
             _id: '0017',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-ВТ-1-ЗМ-0К37',
             staticName: 'ЩУ-ВЕНТ-ВТ-1-ЗМ-0,37',
             ratedEnginePower: '0,37',
@@ -649,7 +649,7 @@ export const productsObj = {
         {
             _id: '0018',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-ВТ-1-ЗМ-2К2',
             staticName: 'ЩУ-ВЕНТ-ВТ-1-ЗМ-2,2',
             ratedEnginePower: '2,2',
@@ -687,7 +687,7 @@ export const productsObj = {
         {
             _id: '0019',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-ВТ-1-ЗМ-3К',
             staticName: 'ЩУ-ВЕНТ-ВТ-1-ЗМ-3',
             ratedEnginePower: '3',
@@ -725,7 +725,7 @@ export const productsObj = {
         {
             _id: '0020',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-ВТ-1-ЗМ-4К',
             staticName: 'ЩУ-ВЕНТ-ВТ-1-ЗМ-4',
             ratedEnginePower: '4',
@@ -763,7 +763,7 @@ export const productsObj = {
         {
             _id: '0021',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-ВТ-1-ЗМ-5К5',
             staticName: 'ЩУ-ВЕНТ-ВТ-1-ЗМ-5,5',
             ratedEnginePower: '5,5',
@@ -801,7 +801,7 @@ export const productsObj = {
         {
             _id: '0022',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-ВТ-1-ЗМ-7К5',
             staticName: 'ЩУ-ВЕНТ-ВТ-1-ЗМ-7,5',
             ratedEnginePower: '7,5',
@@ -839,7 +839,7 @@ export const productsObj = {
         {
             _id: '0023',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-ВТ-1-ЗМ-11К',
             staticName: 'ЩУ-ВЕНТ-ВТ-1-ЗМ-11',
             ratedEnginePower: '11',
@@ -877,7 +877,7 @@ export const productsObj = {
         {
             _id: '0024',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТ-ВТ-1-ЗМ-15К',
             staticName: 'ЩУ-ВЕНТ-ВТ-1-ЗМ-15',
             ratedEnginePower: '15',
@@ -915,7 +915,7 @@ export const productsObj = {
         {
             _id: '0025',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К35ф-4К5СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,35ф-4,5/1',
             ratedEnginePower: '0,37',
@@ -953,7 +953,7 @@ export const productsObj = {
         {
             _id: '0026',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К75ф-4К5СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,75ф-4,5/1',
             ratedEnginePower: '0,75',
@@ -991,7 +991,7 @@ export const productsObj = {
         {
             _id: '0027',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К35ф-6СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,35ф-6/1',
             ratedEnginePower: '0,37',
@@ -1029,7 +1029,7 @@ export const productsObj = {
         {
             _id: '0028',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К75ф-6СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,75ф-6/1',
             ratedEnginePower: '0,75',
@@ -1067,7 +1067,7 @@ export const productsObj = {
         {
             _id: '0029',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К35ф-7К5СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,35ф-7,5/1',
             ratedEnginePower: '0,37',
@@ -1105,7 +1105,7 @@ export const productsObj = {
         {
             _id: '0030',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К75ф-7К5СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,75ф-7,5/1',
             ratedEnginePower: '0,75',
@@ -1143,7 +1143,7 @@ export const productsObj = {
         {
             _id: '0031',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К35ф-12СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,35ф-12/1',
             ratedEnginePower: '0,37',
@@ -1181,7 +1181,7 @@ export const productsObj = {
         {
             _id: '0032',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К75ф-12СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,75ф-12/1',
             ratedEnginePower: '0,75',
@@ -1219,7 +1219,7 @@ export const productsObj = {
         {
             _id: '0033',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К35ф-15СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,35ф-15/1',
             ratedEnginePower: '0,37',
@@ -1257,7 +1257,7 @@ export const productsObj = {
         {
             _id: '0034',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТп-Э-1-ЗМ-0К75ф-15СТ1',
             staticName: 'ЩУ-ВЕНТп-Э-1-ЗМ-0,75ф-15/1',
             ratedEnginePower: '0,75',
@@ -1295,7 +1295,7 @@ export const productsObj = {
         {
             _id: '0035',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К35-4К5СТ1Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,35-4,5/1Т',
             ratedEnginePower: '0,37',
@@ -1333,7 +1333,7 @@ export const productsObj = {
         {
             _id: '0036',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К75-4К5СТ1Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,75-4,5/1Т',
             ratedEnginePower: '0,75',
@@ -1371,7 +1371,7 @@ export const productsObj = {
         {
             _id: '0037',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К35-6СТ1Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,35-6/1Т',
             ratedEnginePower: '0,37',
@@ -1409,7 +1409,7 @@ export const productsObj = {
         {
             _id: '0038',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К75-6СТ1Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,75-6/1Т',
             ratedEnginePower: '0,75',
@@ -1447,7 +1447,7 @@ export const productsObj = {
         {
             _id: '0039',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К35-7К5СТ1Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,35-7,5/1Т',
             ratedEnginePower: '0,37',
@@ -1485,7 +1485,7 @@ export const productsObj = {
         {
             _id: '0040',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К75-7К5СТ1Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,75-7,5/1Т',
             ratedEnginePower: '0,75',
@@ -1523,7 +1523,7 @@ export const productsObj = {
         {
             _id: '0041',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К35-12СТ2Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,35-12/2Т',
             ratedEnginePower: '0,37',
@@ -1561,7 +1561,7 @@ export const productsObj = {
         {
             _id: '0042',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К75-12СТ2Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,75-12/2Т',
             ratedEnginePower: '0,75',
@@ -1599,7 +1599,7 @@ export const productsObj = {
         {
             _id: '0043',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К35-15СТ2Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,35-15/2Т',
             ratedEnginePower: '0,37',
@@ -1637,7 +1637,7 @@ export const productsObj = {
         {
             _id: '0044',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Щит управления ЩУ-ВЕНТм-Э-1-ЗМ-0К75-15СТ2Т',
             staticName: 'ЩУ-ВЕНТм-Э-1-ЗМ-0,75-15/2Т',
             ratedEnginePower: '0,75',
@@ -1677,7 +1677,7 @@ export const productsObj = {
         {
             _id: '0001',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Датчик температуры гильзовый TD-G-0-IP54-NTC10k',
             staticName: 'Датчик температуры гильзовый TD-G-0-IP54-NTC10k',
             ratedEnginePower: '',
@@ -1709,7 +1709,7 @@ export const productsObj = {
         {
             _id: '0002',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Пульт управления ЩУ',
             staticName: 'Пульт управления ЩУ',
             ratedEnginePower: '',
@@ -1773,7 +1773,7 @@ export const productsObj = {
         {
             _id: '0004',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Частотный преобразователь',
             staticName: 'Частотный преобразователь',
             ratedEnginePower: '',
@@ -1805,7 +1805,7 @@ export const productsObj = {
         {
             _id: '0005',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Пульт дистанционного управления ПДУ-БК',
             staticName: 'Пульт дистанционного управления ПДУ-БК',
             ratedEnginePower: '',
@@ -1837,7 +1837,7 @@ export const productsObj = {
         {
             _id: '0006',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Привод воздушной заслонки',
             staticName: 'Привод воздушной заслонки',
             ratedEnginePower: '',
@@ -1869,7 +1869,7 @@ export const productsObj = {
         {
             _id: '0007',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Пульт дистанционного управления ПДУ-К',
             staticName: 'Пульт дистанционного управления ПДУ-К',
             ratedEnginePower: '',
@@ -1901,7 +1901,7 @@ export const productsObj = {
         {
             _id: '0008',
             image: '',
-            price: '',
+            price: '56 888',
             name: 'Датчик температуры уличный',
             staticName: 'Датчик температуры уличный',
             ratedEnginePower: '',

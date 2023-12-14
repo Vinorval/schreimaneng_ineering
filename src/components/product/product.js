@@ -82,7 +82,7 @@ const Product = ({ product }) => {
                         <p className={Styles.description__text} >{product.description.replace(/;/g, "\n")}</p>
                     </div>
                     <div className={Styles.description__order} >
-                        <p className={Styles.description__price} >56 888 р.</p>
+                        <p className={Styles.description__price} >{product.price}</p>
                         <button type='button' className={Styles.description__button} onClick={showPopup} >Добавить</button>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ const Product = ({ product }) => {
                         </li>
                     </ul>
                 </li>
-                <li className={Styles.detail__block} >
+                {/*<li className={Styles.detail__block} >
                     <h2 className={Styles.detail__title} >Конструктивные характеристики</h2>
                     <ul className={Styles.detail__list} >
                         <li className={Styles.detail__item} >
@@ -141,7 +141,7 @@ const Product = ({ product }) => {
                             <p className={Styles.detail__valueText} >{product.designCharacteristics.housingMaterial[1]}</p>
                         </li>
                     </ul>
-                </li>
+    </li>*
                 <li className={Styles.detail__block} >
                     <h2 className={Styles.detail__title} >Характеристики двигателя</h2>
                     <ul className={Styles.detail__list} >
@@ -162,7 +162,7 @@ const Product = ({ product }) => {
                             <p className={Styles.detail__valueText} >{product.engineCharacteristics.ratedPowerElectricMotor[1]}</p>
                         </li>
                     </ul>
-                </li>
+    </li>*/}
                 <li className={Styles.detail__block} >
                     <h2 className={Styles.detail__title} >Климатические характеристики</h2>
                     <ul className={Styles.detail__list} >

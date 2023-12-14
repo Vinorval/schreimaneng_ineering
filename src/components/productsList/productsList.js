@@ -14,6 +14,7 @@ const ProductsList = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     let title;
+    let link;
     const [show, setShow] = React.useState(false);
     const [product, setProduct] = React.useState({});
     const [startCard, setSartCard] = React.useState(0);
@@ -45,10 +46,12 @@ const ProductsList = () => {
         switch (location.pathname) {
             case '/schreimaneng_ineering/catalog/controlPanel': {
                 title = 'Щиты управления';
+                link = '/schreimaneng_ineering/catalog/controlPanel';
                 return products.controlPanel
             }
             case '/schreimaneng_ineering/catalog/autoDevice': {
                 title = 'Приборы автоматики';
+                link = '/schreimaneng_ineering/catalog/autoDevice';
                 return products.autoDevice
             }
             default: {
@@ -62,13 +65,13 @@ const ProductsList = () => {
         let productReturn = [];
         for(let i=0; i < checked.length; i++) {
             console.log(checked[i]);
-            let product = getProductsArr().filter(item => item.characteristic.series == checked[i]);
+            let product = getProductsArr().filter(item => item.characteristic.series[1] == checked[i]);
             productReturn = productReturn.concat(product);
         }
         return productReturn;
     }
 
-    const details = [...new Set(getProductsArr().map( item => item.characteristic.series ))];
+    const details = [...new Set(getProductsArr().map( item => item.characteristic.series[1] ))];
 
     function showsnumberList() {
         if( window.innerWidth < 768 ) {
@@ -79,7 +82,9 @@ const ProductsList = () => {
   
     React.useEffect(() => {
         showsnumberList();
-    }, []);
+        window.innerWidth < 400 && setTypeCard('table');
+        console.log(window.innerWidth);
+    }, [window.innerWidth]);
 
     function handleMore() {
         if( window.innerWidth < 768 ) {
@@ -90,7 +95,7 @@ const ProductsList = () => {
     }
 
     function hideButton() {
-        if (getProductsArr().length == ProductCards.length) {
+        if ((getProductsArr().length == ProductCards.length) || (checked.length != 0)) {
           return true
         } else {
           return false
@@ -102,15 +107,15 @@ const ProductsList = () => {
                 return (
                     <li key={item._id} className={`${Styles.item} ${typeCard == 'list' && Styles.item_type_list}`}>
                         <img className={`${Styles.item__image} ${typeCard == 'list' && Styles.item__image_type_list}`} src={Item} />
-                        <NavLink className={`${Styles.item__description} ${typeCard == 'list' && Styles.item__description_type_list}`} to={`/schreimaneng_ineering/catalog/controlPanel/${item._id}`}>
-                            <h3 className={Styles.item__name} >{item.name}</h3>
+                        <NavLink className={`${Styles.item__description} ${typeCard == 'list' && Styles.item__description_type_list}`} to={`${link}/${item._id}`}>
+                            <h3 className={`${Styles.item__name} ${typeCard == 'list' && Styles.item__name_type_list}`} >{item.name}</h3>
                             <p className={`${Styles.item__text} ${typeCard == 'list' && Styles.item__text_type_list}`} >{item.description}</p>
-                            <p className={[Styles.item__text, Styles.item__text_type_last]} >Арт. {item._id}</p>
+                            <p className={`${Styles.item__text}, ${Styles.item__text_type_last} ${typeCard == 'list' && `${Styles.item__text_type_list} ${Styles.item__text_position}`}`} >Арт. {item._id}</p>
                         </NavLink>
                         <div className={`${Styles.item__order} ${typeCard == 'list' && Styles.item__order_type_list}`} >
-                            <p className={Styles.item__price} >₽ 56 260</p>
-                            <p className={`${Styles.item__text} ${typeCard == 'list' && Styles.item__text_type_list}`} >на заказ</p>
-                            <button type='button' className={Styles.item__button} onClick={() => showPopup(item)} >Добавить</button>
+                            <p className={`${Styles.item__price} ${typeCard == 'list' && Styles.item__price_type_list}`} >₽ {item.price}</p>
+                            <p className={`${Styles.item__text} ${Styles.item__text_display} ${typeCard == 'list' && Styles.item__text_type_list}`} >на заказ</p>
+                            <button type='button' className={`${Styles.item__button} ${typeCard == 'list' && Styles.item__button_type_list}`} onClick={() => showPopup(item)} >Добавить</button>
                         </div>
                     </li>
                 )
@@ -140,13 +145,16 @@ const ProductsList = () => {
                     } )}
                 </ul>
             </div>
-            <ul className={`${Styles.list} ${typeCard == 'list' && Styles.list_type_list}`}>
-                <div className={`${Styles.catalog__buttons} ${typeCard == 'list' && Styles.catalog__buttons_type_list}`}>
-                    <button className={Styles.catalog__button}><img src={IconList} onClick={() => setTypeCard('list')} /></button>
-                    <button className={Styles.catalog__button} ><img src={IconTable} onClick={() => setTypeCard('table')}/></button>
-                </div>
-                {(checked.length == 0) ? returnProduct(ProductCards) : returnProduct(filterCards())}
-            </ul>
+            <div className={`${Styles.catalog__market}`}>
+                {(window.innerWidth > 400 ) && <div className={`${Styles.catalog__buttons} ${typeCard == 'list' && Styles.catalog__buttons_type_list}`}>
+                    <p>Варианты отображения:</p>
+                    <button className={Styles.catalog__button}><img className={Styles.catalog__ikon} src={IconList} onClick={() => setTypeCard('list')} /></button>
+                    <button className={Styles.catalog__button} ><img className={Styles.catalog__ikon} src={IconTable} onClick={() => setTypeCard('table')}/></button>
+                </div>}
+                <ul className={`${Styles.list} ${typeCard == 'list' && Styles.list_type_list}`}>
+                    {(checked.length == 0) ? returnProduct(ProductCards) : returnProduct(filterCards())}
+                </ul>
+            </div>
             {!hideButton() && <button className={Styles.buttonMore} onClick={handleMore} >Показать ещё</button>}
             { show && <OrderPopup show={show} closePopup={closePopup} product={product} />}
         </section>

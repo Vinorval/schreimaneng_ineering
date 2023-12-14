@@ -13,11 +13,16 @@ const ItemPage = () => {
     const location = useLocation();
 
     const findProduct = () => {
-        switch (location.pathname.slice(0, 43)) {
-            case '/schreimaneng_ineering/catalog/controlPanel': {
+        switch (location.pathname.slice(0, 41)) {
+            case '/schreimaneng_ineering/catalog/controlPan': {
                 console.log(products.controlPanel)
                 locationLinks.push({ link: "/schreimaneng_ineering/catalog/controlPanel", text: ' Щиты управления /' });
                 return products.controlPanel.find(item => item._id == location.pathname.slice(-4))
+            }
+            case '/schreimaneng_ineering/catalog/autoDevice': {
+                console.log(products.autoDevice);
+                locationLinks.push({ link: "/schreimaneng_ineering/catalog/controlPanel", text: ' Щиты управления /' });
+                return products.autoDevice.find(item => item._id == location.pathname.slice(-4))
             }
         }
     };
