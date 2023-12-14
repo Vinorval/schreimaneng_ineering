@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/schreimaneng_ineering/static/css/main.9f4c47c7.css",
-    "main.js": "/schreimaneng_ineering/static/js/main.c63cc7a0.js",
+    "main.css": "/schreimaneng_ineering/static/css/main.b3beef24.css",
+    "main.js": "/schreimaneng_ineering/static/js/main.ee06ffd3.js",
     "static/js/787.f60c5ca6.chunk.js": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js",
     "static/media/foto-man.png": "/schreimaneng_ineering/static/media/foto-man.9bbf0c62065d115c954a.png",
     "static/media/map.jpg": "/schreimaneng_ineering/static/media/map.a2ff11934878f3406cd0.jpg",
@@ -25,12 +25,12 @@
     "static/media/4105964-collapse-minus-reduce-remove_113927.svg": "/schreimaneng_ineering/static/media/4105964-collapse-minus-reduce-remove_113927.879df8cc2610f505f8bc42db52145f2c.svg",
     "static/media/Vector_list.svg": "/schreimaneng_ineering/static/media/Vector_list.6b403540a4f23957af2842310076a33f.svg",
     "static/media/next.svg": "/schreimaneng_ineering/static/media/next.82bc30307efea91c53de17a7fe4f50c0.svg",
-    "main.9f4c47c7.css.map": "/schreimaneng_ineering/static/css/main.9f4c47c7.css.map",
-    "main.c63cc7a0.js.map": "/schreimaneng_ineering/static/js/main.c63cc7a0.js.map",
+    "main.b3beef24.css.map": "/schreimaneng_ineering/static/css/main.b3beef24.css.map",
+    "main.ee06ffd3.js.map": "/schreimaneng_ineering/static/js/main.ee06ffd3.js.map",
     "787.f60c5ca6.chunk.js.map": "/schreimaneng_ineering/static/js/787.f60c5ca6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f4c47c7.css",
-    "static/js/main.c63cc7a0.js"
+    "static/css/main.b3beef24.css",
+    "static/js/main.ee06ffd3.js"
   ]
 }
