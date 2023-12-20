@@ -30,7 +30,7 @@ const Option = ({ el, name, description, inPopup }) => {
 
     return (
         <label htmlFor="V" className={Styles.option__label} >
-            <input type="checkbox" checked={checked} onChange={chengeCheckbox} id="V" value="V" />
+            <input className={Styles.option__checkbox} type="checkbox" checked={checked} onChange={chengeCheckbox} id="V" value="V" />
             <div className={Styles.option__item} >
                 <img src={Item}  className={Styles.option__image} />
                 <div className={Styles.option__text} >
@@ -38,8 +38,8 @@ const Option = ({ el, name, description, inPopup }) => {
                     <p>{description}</p>
                 </div>
                 <div className={Styles.option__shop} >
-                    <p> 1 470</p>
-                    <p>в наличии</p>
+                    <p className={Styles.option__price}> 1 470</p>
+                    <p className={Styles.margin_none}>в наличии</p>
                 </div>
                 <button className={Styles.option__button}>Выбрать</button>
             </div>

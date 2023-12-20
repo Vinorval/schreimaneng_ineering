@@ -16,6 +16,7 @@ const OrderPopup = ({ show, closePopup, product }) => {
     const { products } = useSelector( store => ({ products: store.products.products }) );
     const { selectOptions } = useSelector( store => ({ selectOptions: store.products.product }) );
     const location = useLocation();
+    //console.log(product.options.length == 0 )
 
     //const findProduct = () => {
         //switch (location.pathname.slice(0, 43)) {
@@ -41,33 +42,32 @@ const OrderPopup = ({ show, closePopup, product }) => {
 
     const pushOrder = () => {
         dispatch(postOrderSuccess([product, selectOptions]));
-        console.log([product, selectOptions]);
+        //console.log([product, selectOptions]);
         closePopup();
     }
 
     return (
         <Popup show={show} closePopup={closePopup}>
-            <NavLink to={`/schreimaneng_ineering/catalog/controlPanel/item`} className={Styles.item}>
-                    <img className={Styles.item__image} src={Item} />
-                    <div className={Styles.item__description} >
-                        <h3 className={Styles.item__name} >Щит управления {product.name}</h3>
-                        <p className={Styles.item__text} >{product._id}</p>
-                    </div>
-                    <p className={Styles.item__price} >₽ 56 260</p>
+            <div className={Styles.item}>
+                    <NavLink to={`/schreimaneng_ineering/catalog/controlPanel/item`}><img className={Styles.item__image} src={Item} /></NavLink>
+                    <NavLink to={`/schreimaneng_ineering/catalog/controlPanel/item`} className={Styles.item__name}><h3>Щит управления {product.name}</h3></NavLink>
                     <div className={Styles.item__quantity}>
-                        <button className={Styles.item__count}><img src={Minus} /></button>
-                        <input className={Styles.item__value} defaultValue={2} />
-                        <button className={Styles.item__count}><img src={Plus} /></button>
+                        <p className={Styles.item__price} >₽ 56 260</p>
+                        <div className={Styles.item__countBlock}>
+                            <button className={Styles.item__count}><img src={Minus} /></button>
+                            <input className={Styles.item__value} defaultValue={2} />
+                            <button className={Styles.item__count}><img src={Plus} /></button>
+                        </div>
                         <p className={Styles.item__price} >₽ 112 620</p>
                     </div>
-                </NavLink>
+                </div>
                 <button type='button' className={Styles.item__button} onClick={pushOrder} >Добавить</button>
-                <div className={Styles.option}>
+                {!(product.options.length == 0) && <div className={Styles.option}>
                     <h3 className={Styles.option__title} >Добавьте опции в комплект:</h3>
                     <ul className={Styles.option__list} >
                         {product && returnOptions()}
                     </ul>
-                </div>
+                </div>}
         </Popup>
     )
 };
